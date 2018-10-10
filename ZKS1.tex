@@ -1,8 +1,9 @@
-\documentclass{VUMIFPSkursinis}
+\documentclass[oneside]{VUMIFPSkursinis}
 \usepackage{algorithmicx}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{amsfonts}
+\usepackage{float}
 \usepackage{amsmath}
 \usepackage{bm}
 \usepackage{caption}
@@ -11,9 +12,11 @@
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{subfig}
+\usepackage{ltablex}
+\usepackage{longtable}
 \usepackage{wrapfig}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}  
+\usepackage{subfig}
+\usepackage{pbox}
 
 % Titulinio aprašas
 \university{Vilniaus universitetas}
@@ -57,9 +60,9 @@ Pirmojo laboratorinio darbo reikalavimai.
 \section{Būsimos sistemos įtakojamų asmenų kategorijos}
 \subsection{Suinteresuotų asmenų grupės}
 \begin{itemize}
-	\item Pirminiai - Banko klientai.
-	\item Antriniai - Banko darbuotojai, kurie žmonės aiškina, kaip naudotis sistema.
-	\item Tretiniai - Kiti bankai, kurių klientų skaičių įtakoja šio banko sekmė, akcininkai, kurių pajamos priklauso nuo banko sekmės.
+	\item Pirminiai - Banko klientai, betarpiškai naudojasi sistema.
+	\item Antriniai - neegzistuoja.
+	\item Tretiniai - Kiti bankai, kurių klientų skaičių įtakoja šio banko sekmė, bei akcininkai, kurių pajamos priklauso nuo banko sekmės.
 \end{itemize}
 \section{Banko klientų poreikiai}
 \subsection{Naudotojų charakteristikos}
@@ -93,6 +96,10 @@ Pirmojo laboratorinio darbo reikalavimai.
 \subsubsection{<pirmosios kompiuterizuojamos veiklos>? veiklų charakteristikos}
 \subsubsection{<pirmojo scenarijaus> problemos ir tobulinimo galimybės}
 \subsubsection{būsimasis patobulintas scenarijus}
+\subsubsection{Informacijos paieškos koncepcinis scenarijus}
+\subsubsection{Informacijos paieškos veiklų charakteristikos}
+\subsubsection{Informacijos paieškos problemos ir tobulinimo galimybės}
+\subsubsection{būsimasis patobulintas scenarijus}
 \subsection{Panaudojamumo siekiai ir matai}
 \begin{itemize}
 	\item Klientas galės pasiekti pavedimo langą nedaugiau kaip per 3 veiksmus.
@@ -101,6 +108,13 @@ Pirmojo laboratorinio darbo reikalavimai.
 	\item 
 \end{itemize}
 \section{Įkvepiančios esamų interfeisų idėjos}
+\begin{figure}
+  \includegraphics[width=\linewidth]{SearchWindow.png}
+  \caption{1 Pav. Informacijos paieškos langas}
+	\label{fig:searchWindow}
+	Nauda: Vendant tekstą ieškoma po kiekvieno įvesto simbolio, galima filtruoti pagal skirtingas grupes.
+\end{figure}
+
 \section{Terminų žodynėlis(maybe)}
 
 \end{document}
