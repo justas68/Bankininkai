@@ -231,6 +231,10 @@
     \section*{#1}%
     \addcontentsline{toc}{section}{#1}% 
 }
+\newcommand{\subsubsectionnonum}[1]{%
+    \subsubsection*{#1}%
+    \addcontentsline{toc}{subsubsection}{#1}% 
+}
 \newcommand{\subsectionnonum}[1]{%
     \subsection*{#1}%
     \addcontentsline{toc}{subsection}{#1}% 

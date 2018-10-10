@@ -1,4 +1,4 @@
-\documentclass[oneside]{VUMIFPSkursinis}
+\documentclass{VUMIFPSkursinis}
 \usepackage{algorithmicx}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
@@ -17,7 +17,10 @@
 \usepackage{wrapfig}
 \usepackage{subfig}
 \usepackage{pbox}
-
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\theenumiii}
+\renewcommand{\theenumiii}{\theenumii\arabic{enumiii}.}
 % Titulinio aprašas
 \university{Vilniaus universitetas}
 \faculty{Matematikos ir informatikos fakultetas}
@@ -92,14 +95,52 @@ Pirmojo laboratorinio darbo reikalavimai.
 	\item Ekspertai - šie sistemos naudotojai puikiai išmano sistemą, jiems patogus didelio funkcionalumo sudėtingas interfeisas. Juos erzina didelis žingsnių skaičius bei į naujokus orientuota vartotojo sąsaja.
 \end{itemize}
 \subsection{Kompiuterizuojamų veiklų analizė}
-\subsubsection{<pirmosios kompiuterizuojamos veiklos>? koncepcinis scenarijus}
-\subsubsection{<pirmosios kompiuterizuojamos veiklos>? veiklų charakteristikos}
-\subsubsection{<pirmojo scenarijaus> problemos ir tobulinimo galimybės}
-\subsubsection{būsimasis patobulintas scenarijus}
-\subsubsection{Informacijos paieškos koncepcinis scenarijus}
-\subsubsection{Informacijos paieškos veiklų charakteristikos}
-\subsubsection{Informacijos paieškos problemos ir tobulinimo galimybės}
-\subsubsection{būsimasis patobulintas scenarijus}
+\subsubsectionnonum{<pirmosios kompiuterizuojamos veiklos>? koncepcinis scenarijus}
+\subsubsectionnonum{<pirmosios kompiuterizuojamos veiklos>? veiklų charakteristikos}
+\subsubsectionnonum{<pirmojo scenarijaus> problemos ir tobulinimo galimybės}
+\subsubsectionnonum{būsimasis patobulintas scenarijus}
+\subsubsectionnonum{Informacijos paieškos koncepcinis scenarijus}
+Jonas ieško kaip gali išsinuomuoti saugyklą banke, pasirinkęs "Mano bankas" pamato ilgą sarašą informacijos, tačiau jį peržvelgęs nerando norimos informacijos, dar kartą atydžiai peržvelgia naudingos informacijos nuorodų grupę, tačiau vistiek neranda norimo puslapio nuorodos. Tik tada pamato, kad dešiniąjame lango kampe yra paieškos logotipas, jį paspaudus įveda "seifo nuoma" į paieškos langą, tačiau paieška neranda nieko prasmingo. Galiausiai neapsikentęs jis parašo žinutę banko dorbuotojui, kuris jam atsiunčia nuorodą į ieškomą puslapį, bei praneša, kad šios informacijos reikia ieškoti neprisijungus prie banko. 
+\subsubsectionnonum{Informacijos paieškos veiklų charakteristikos}
+Veiklos dažnis: Informacijos paieška banko internetinėje svetainėje paprastai nėra dažna: apie 5-6 kartus į metus, todėl jos pasiekimas turėtų būti pakankamai akivaidus. Neradus rezultatų siūlytų panašius arba atidaryti bendravymo gyvai langą, kuriame vartotojas galėtų sužinoti norimą informaciją. \par
+Veiklos trukmė: Informacijos paieška vidutiniškai užtrunka neilgai - iki 5 minučių.
+\subsubsectionnonum{Informacijos paieškos problemos ir tobulinimo galimybės}
+\begin{itemize}
+	\item Paieškos lango pozicija nėra akivaizdi.
+	\item Paieškos rezultatų negalima sugrupuoti.
+	\item Paieška informacijos ieško ne iš viso galimo informacinio lauko.
+	\item Neradus rezultatų nėra pasiūlomas joks situacijos sprendimas.
+\end{itemize}
+\subsubsectionnonum{būsimasis patobulintas scenarijus}
+\begin{center}
+Vartotojas norėdamas surasti informaciją apie banko nuomuojamus seifus:
+\end{center}
+\begin{enumerate}
+	\item Paspaudžia ant paieškos mygtuko pagrindiniame lange
+	\item Sistema atidaro naują langą, kuriame vartotojas gali įvesti raktinius žodžius
+	\item Vartotojas įvedęs raktinius žodžius gali atidaryti vieną iš rastų rezultatų, filtruoti rezultatus pagal kategorijas, pažiūrėti alternatyvius siūlomus raktinius žodžius.
+	\begin{enumerate}
+		\item atidarius vieną iš rezultatų:
+		\begin{enumerate}
+			\item tame pačiame lange atidaromas pasirinkto rezultato puslapis
+			\item vartotojas vienu paspaudimu gali grįžti atgal į rezultatų sąrašą
+		\end{enumerate}
+	\end{enumerate}
+	\begin{enumerate}
+		\item pasirinkęs filtravimą pagal kategoriją: vartotojas mato tik tuos rezultatus, kurie priklauso pasirinktai kategorijai.
+		\begin{enumerate}
+			\item vartotojas mato tik tuos rezultatus, kurie priklauso pasirinktai kategorijai
+			\item vartotojas bet gali atšaukti filtravimą
+		\end{enumerate}
+	\end{enumerate}
+	\begin{enumerate}
+		\item pasirinkęs peržiūrėti alternatyvius siūlomus variantus:
+		\begin{enumerate}
+			\item gali pasirinkti vieną iš siūlomų variantų ir ieškoti iš naujo
+			\item toliau žiūrėti jau rastus rezultatus
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
 \subsection{Panaudojamumo siekiai ir matai}
 \begin{itemize}
 	\item Klientas galės pasiekti pavedimo langą nedaugiau kaip per 3 veiksmus.
