@@ -31,7 +31,7 @@
 \status{3 kurso 3 grupės studentai}
 \author{Justas Tvarijonas}
 \secondauthor{Džiugas Mažulis}   
-\thirdauthor{Michal Stankiewicz}   
+\thirdauthor{Michal Stankevič}   
 \supervisor{Kristina Lapin, Doc., Dr.}
 \date{Vilnius – \the\year}
 
@@ -40,21 +40,24 @@
 \tableofcontents
 \sectionnonum{Anotacija}
 \subsectionnonum{Darbo tikslas}
-Naudojant į vartotoją orientuotą dizainą apibrėžti Swedbank internetinio banko dizaino pakeitimus.
+Naudojant į vartotoją orientuotą dizainą palengvinti bei pagerinti Swedbank internetinio banko puslapio naudojamumą bei efektyvumą taip padidinant puslapio našumą bei vartotojų pasitenkinimą.
+\subsectionnonum{Darbo pasiskirstymas}
 \begin{itemize}
-	\item Justas Tvarijonas - Tvarijonasjustas@gmail.com
-	\item Džiugas Mažulis - džiugas.mažulis@gmail.com
-	\item Michal Stankevič - michal.stankevic@gmail.com
+	\item Justas Tvarijonas - tvarijonasjustas@gmail.com \newline
+	Įvadas, kompiuterizuojamų veiklų analizė, įkvepiantys interfeisai.
+	\item Džiugas Mažulis - džiugas.mažulis@gmail.com \newline 
+	Kompiuterizuojamų veiklų analizė, įkvepiantys interfeisai.
+	\item Michal Stankevič - michal.stankevic@gmail.com \newline
+	 Kompiuterizuojamų veiklų analizė, įkvepiantys interfeisai.
 \end{itemize}
+\tableofcontents
 \sectionnonum{Įvadas}
 \subsectionnonum{Dalykinė sritis}
-Internetinė bankininkystė, finansai.
+Internetinė bankininkystė.
 \subsectionnonum{Probleminė sritis}
-Vartotojų patogumo gerinimas, patogus informacijos pateikimas.
+Vartotojų patogumo gerinimas, patogus informacijos pateikimas. Sistemos pateikimas aiškenia vartotojo sąsaja.
 \subsectionnonum{Naudotojai}
-\begin{itemize}
-	\item Banko klientas - klientas turi galėti atlikti bankinius pervedimus, užsakymus, bei rasti norimą informaciją.
-\end{itemize}
+Banko klientas - turi galimybę atlikti mokėjimus, peržiūrėti sąskaitos išrašus, kurti mokėjimo ruošinius, ieškoti reikalingos informacijos.
 \subsectionnonum{Darbo pagrindas}
 Pirmojo laboratorinio darbo reikalavimai.
 \section{Būsimos sistemos įtakojamų asmenų kategorijos}
@@ -83,12 +86,14 @@ Pirmojo laboratorinio darbo reikalavimai.
 	\item Veikla yra pertraukiama. Klientas gali suformuluoti mokėjimą, tada užsiimti kita veikla ir vėliau grįžti užbaigti mokėjimą.
 	\item Mokėjimai atliekami su dideliu susikaupimu.
 	\item Naudojimasis sistema atliekamas saugioje aplinkoje.
-	\item Paprastai sistema naudojama turint aiškų tikslą.
+	\item Paprastai sistema naudojama turint aiškų tikslą.	\item Apsilankymas banko svetainėje paprastai trunka iki 30 minučių.
+	\item Banko klientai svetainėje apsilanko bent kelis kartus į mėnesį.
+
 \end{itemize}
 \subsubsection{Naudotojų tipas}
 \begin{itemize}
-	\item Naujokai - šie naudotojai iš anksto nežino kur jiems reikia spausti norint pasiekti norimą tikslą. Juos gąsdina sudėtingas ir pilnas funkcionalumo pagrindinis langas, tačiau pastebi didesniu mygtukus ar užrašus, kurie skelbia jiem naudingą informaciją.
-	\item Vidutiniškai patyrę - šie naudotojai banko paslaugomis naudojasi pakankamai dažnai, kad efektyviai atliktu įprastus veiksmus, tačiau susiduria su problemomis norėdami atlikti sudėtingesnias operacijas.
+	\item Naujokai - šie naudotojai iš anksto nežino kur jiems reikia spausti norint pasiekti norimą tikslą. Juos gąsdina sudėtingas ir pilnas funkcionalumo pagrindinis langas, tačiau pastebi didesnius mygtukus ar užrašus, kurie skelbia jiem naudingą informaciją.
+	\item Vidutiniškai patyrę - šie naudotojai banko paslaugomis naudojasi pakankamai dažnai, kad efektyviai atliktų įprastus veiksmus, tačiau susiduria su problemomis norėdami atlikti sudėtingesnes operacijas.
 	\item Ekspertai - šie sistemos naudotojai puikiai išmano sistemą, jiems patogus didelio funkcionalumo sudėtingas interfeisas. Juos erzina didelis žingsnių skaičius bei į naujokus orientuota vartotojo sąsaja.
 \end{itemize}
 \subsection{Kompiuterizuojamų veiklų analizė}
@@ -196,19 +201,25 @@ Veiklos trukmė: Mokėjimo ruošinio sukūrimas turėtų užtrukti iki 10 minuč
 		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}
+\subsubsectionnonum{Sąskaitos išrašų tikrinimo konceptualus scenarijus}
+Džiugas nori pažiūrėti kelių paskutinių mėnesių sąskaitos išrašą. Prisijungęs prie internetinio banko, antroje nuo viršaus esančioje meniu juostoje pasirenka skyrelį „Kasdienės paslaugos”. Pasirodžiusiame meniu spaudžia nuorodą „Išrašas”. Išrašo sukūrimui sistema reikalauja sąskaitos pavadinimo bei laikotarpio, kurio metu sąskaitoje vyko finansinės operacijos. Išrašo laikotarpį apibrėžiantys formos laukai turi numatytasiąs reikšmes: einamojo mėnesio pirmoji diena ir šiandieninė data. Tikėdamasis gauti išrašą apie kelis mėnesius sąskaitos naudojimo, Džiugas keičia pradinės datos reikšmę - spaudžia ant lauko, išskleidžiamas kalendorius, kuriame jis renkasi norimą mėnesį ir pirmą dieną. Paspaudęs „Pateikti užklausą", jis išvysta sugeneruotą išrašą. Peržvelgęs jį, Džiugas nori praplėsti laikotarpį dviem mėnesiams atgaline data. Dėl to jis privalo vėl keisti pradinės datos reikšmę: mėnesį ir dieną, nors jam užtektų pakeisti tik mėnesį.
+\subsubsectionnonum{Sąskaitos išrašų tikrinimo veiklų charakteristikos}
+Veiklos dažnis: Sąskaitos išrašo tikrinimo dažnis varijuoja. Įprasti klientai retai tikrina sąskaitų išrašus. 
+\subsubsectionnonum{Sąskaitos išrašų tikrinimo problemos ir tobulinimo galimybės}
+Pasirinkus laikotarpio pradžios mėnesį nėra numatytosios dienos reikšmės (1). Dėl to kiekvieną kartą norint pakeistį mėnesį, reikės pasirinkti dieną. (Vidutiniškai) patyrusį vartotoją papildomo žingsnio atkartojimas erzins. Taigi tobulintinas aspektas yra numatytosios dienos pridėjimas į išrašo laikotarpio pradžią, kai pasirenkamas mėnuo.
 \subsection{Panaudojamumo siekiai ir matai}
 \begin{itemize}
-	\item Klientas galės pasiekti pavedimo langą nedaugiau kaip per 3 veiksmus.
-	\item Naudotojas galės išfiltruoti mokėjimus bent pagal 4 skirtingus kriterijus.
-	\item Naudotojas galės filtruoti paieškos rezultatus pagal grupes
+	\item Naudotojas galės filtruoti paieškos rezultatus pagal skirtingas rastas grupes
 	\item Naujas vartotojas paieškos langą surasti galės ne per ilgesnį laiką, nei 30 sekundžių.
+	\item 90\% paieškų bus rezultatyvios.
 	\item Vartotojui įvedus ne mažiau, kaip 3 simbolius į paieškos langą bus siūlomi pilni paieškos tekstai
 	\item Vartotojas galės mokėjimo ruošinių ieškoti pagal pavadinimą, gavėją bei mokėjimo paskirtį
+	\item Mokėjimo ruošinio sukurimo langą vartotojas galės pasiekti ne per daugiau, negu 3 mygtukų paspaudimus.
 	\item Kurdamas mokėjimo ruošinį vartotojas gaus bent 2 pasirinkimus jam sukurti.
 	\item Klientas galės įvesti sumą bei pradėti pavedimą pagrindiniame lange.
 	\item Klientas galės pasirinkti gavėją iš gavėjų arba ankstesnių gavėjų sąrašų.
 	\item Rinkdamasis gavėją iš pateiktų sąrašų, klientas galės atlikti pavedimą 3 mygtukų paspaudimu.
-	\item Pavedimo atlikimas truks ne ilgiau kaip 2 minutes.
+	\item Pavedimo atlikimas truks ne ilgiau kaip 2 minutes.	\item 95\% klientų iš pirmo karto ras kaip atlikti pavedimą.
 \end{itemize}
 \pagebreak
 \section{Įkvepiančios esamų interfeisų idėjos}
