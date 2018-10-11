@@ -32,12 +32,11 @@
 \author{Justas Tvarijonas}
 \secondauthor{Džiugas Mažulis}   
 \thirdauthor{Michal Stankiewicz}   
-\supervisor{Kristina Lapin}
+\supervisor{Kristina Lapin, Doc., Dr.}
 \date{Vilnius – \the\year}
 
 \begin{document}
 \maketitle
-
 \tableofcontents
 \sectionnonum{Anotacija}
 \subsectionnonum{Darbo tikslas}
@@ -93,10 +92,36 @@ Pirmojo laboratorinio darbo reikalavimai.
 	\item Ekspertai - šie sistemos naudotojai puikiai išmano sistemą, jiems patogus didelio funkcionalumo sudėtingas interfeisas. Juos erzina didelis žingsnių skaičius bei į naujokus orientuota vartotojo sąsaja.
 \end{itemize}
 \subsection{Kompiuterizuojamų veiklų analizė}
-\subsubsectionnonum{<pirmosios kompiuterizuojamos veiklos>? koncepcinis scenarijus}
-\subsubsectionnonum{<pirmosios kompiuterizuojamos veiklos>? veiklų charakteristikos}
-\subsubsectionnonum{<pirmojo scenarijaus> problemos ir tobulinimo galimybės}
-\subsubsectionnonum{būsimasis patobulintas scenarijus}
+\subsubsectionnonum{Mokėjimo pavedimų koncepcinis scenarijus}
+Kęstas nori pervesti pinigus į draugo sąskaitą, tačiau pagrindiniame lange neranda pinigų pavedimo funkcijos. Nežinodamas ar „Vietiniai mokėjimai“ yra tai, ko jam reikia, jis meniu juostoje paspaudžia „Mano bankas“. Neradęs tinkamo pasirinkimo Petras meniu juostoje spusteli „Kasdieninės paslaugos“, tačiau jį suglumina skiltyje „Mokėjimai“ atsiradę pasirinkimai: „Mokėjimo pavedimai“, „Vietiniai mokėjimai“, „Įmokos“, „E. sąskaitos“. Pasirinktame „Mokėjimo pavedimai“ lange klientas nežino ką įvesti „Gavėjo pavadinimas“ skiltyje, tik paspaudęs ant klaustuko simbolio sužino, jog įvesti reikia draugo vardą ir pavardę. Visą sąskaitos numerį Petras turi vesti ranka, nors jau yra ankščiau pervedęs draugui pinigų. Įvedęs visus duomenis bei paspaudęs toliau vartotojas atsiduria vietinių mokėjimų lange, kuriame turi įvesti gavėjo šalį, adresą. Paspaudęs mygtuką „Toliau“ Petras perveda draugui pinigus.
+\subsubsectionnonum{Mokėjimo pavedimų veiklų charakteristikos}
+Veiklos dažnis: mokėjimo pavedimai yra esminė bei dažniausiai naudojama elektroninės bankininkystės funkcija: apie 10-15 kartų per mėnesį. Privaloma užtikrinti akivaizdų, vienprasmišką bei vieno mygtuko paspaudimu pasiekiamą pagrindinį funkcionalumą norint greitai ir rezultatyviai atlikti pavedimus. Įvesties langai turi būti aiškiai suprantami bei pasirinkus siųsti pinigus sistema privalo pasiūlyti pasirinkti gavėją iš gavėjų sąrašo arba ankstesnių gavėjų. Iš banko sąskaitos galima atpažinti gavėjo šalį, todėl sistema neturėtų reikalauti šio parametro. \par 
+Veiklos trukmė: mokėjimo pavedimas internetinės bankininkystės sistemoje užtrunka nuo 2 iki 5 minučių.
+\subsubsectionnonum{Mokėjimo pavedimų problemos ir tobulinimo galimybės}
+\begin{itemize}
+	\item Mokėjimo pavedimo funkcija vizualiai neatkreipia dėmesio bei yra neaiškaus pavadinimo.
+	\item Mokėjimų skiltyje per daug pavedimo interpretacijų.
+	\item Įvesties lauko „Gavėjo pavadinimas“ pavadinimas neaiškiai apibrėžia reikalaujamus duomenis.
+	\item Sistema neteikia galimybės pasirinkti anksčiau naudotą gavėją arba gavėją iš sąrašo.
+	\item Sistema iš banko sąskaitos neatpažįsta gavėjo šalies.
+\end{itemize}
+\subsubsectionnonum{Būsimasis patobulintas scenarijus}
+\begin{center}
+\textbf{Vartotojas norėdamas atlikti mokėjimo pavedimą:}
+\end{center}
+\begin{enumerate}
+	\item Pagrindiniame lange į teksto lauką įveda pinigų sumą bei paspaudžia mygtuką „Siųsti pinigus“
+	\item Įvesdamas duomenis
+	\begin{enumerate}
+		\item Pasirenka gavėją iš „Gavėjų sąrašo“
+		\item Pasirenka gavėją iš „Ankstesni“
+		\item Suveda gavėjo sąskaitos numerį
+		\begin{enumerate}
+			\item Į lauką „Gavėjo vardas, pavardė (įmonės pav.)“ įveda gavėjo pavadinimą
+		\end{enumerate}
+	\end{enumerate}
+	\item Paspaudžia mygtuką „Patvirtinti mokėjimą“
+\end{enumerate}
 \subsubsectionnonum{Informacijos paieškos koncepcinis scenarijus}
 Jonas ieško kaip gali išsinuomuoti saugyklą banke, pasirinkęs "Mano bankas" pamato ilgą sarašą informacijos, tačiau jį peržvelgęs nerando norimos informacijos, dar kartą atydžiai peržvelgia naudingos informacijos nuorodų grupę, tačiau vistiek neranda norimo puslapio nuorodos. Tik tada pamato, kad dešiniąjame lango kampe yra paieškos logotipas, jį paspaudus įveda "seifo nuoma" į paieškos langą, tačiau paieška neranda nieko prasmingo. Galiausiai neapsikentęs jis parašo žinutę banko dorbuotojui, kuris jam atsiunčia nuorodą į ieškomą puslapį, bei praneša, kad šios informacijos reikia ieškoti neprisijungus prie banko. 
 \subsubsectionnonum{Informacijos paieškos veiklų charakteristikos}
@@ -110,6 +135,9 @@ Veiklos trukmė: Informacijos paieška vidutiniškai užtrunka neilgai - iki 5 m
 	\item Neradus rezultatų nėra pasiūlomas joks situacijos sprendimas.
 \end{itemize}
 \subsubsectionnonum{Būsimasis patobulintas scenarijus}
+\begin{center}
+	\textbf{Vartotojas norėdamas surasti informacijos apie seifų nuoma:}
+\end{center}
 \begin{enumerate}
 	\item Vartotojas paspaudžia ant paieškos mygtuko pagrindiniame lange
 	\item Sistema atidaro naują langą, kuriame vartotojas gali įvesti raktinius žodžius
@@ -147,6 +175,9 @@ Veiklos trukmė: Mokėjimo ruošinio sukūrimas turėtų užtrukti iki 10 minuč
 	\item Mokėjimo ruošinių paieška galima tik pagal jo pavadinima (tačiau ne pagal gavėją bei mokėjimo paskirtį)
 \end{itemize}
 \subsubsectionnonum{būsimasis patobulintas scenarijus}
+\begin{center}
+	\textbf{Vartotojas norėdamas sukurti mokėjimo ruošinį:}
+\end{center}
 \begin{enumerate}
 	\item Vartotojas atsidaro mokėjimo ruošinių langą bei pasirenka sukurti vietinį mokėjimo ruošinį.
 	\item Sistema vartotojui duoda pasirinkima kurti mokėjimo ruošinį pagal buvusį mokėjimą arba kurti be jo.
@@ -174,6 +205,10 @@ Veiklos trukmė: Mokėjimo ruošinio sukūrimas turėtų užtrukti iki 10 minuč
 	\item Vartotojui įvedus ne mažiau, kaip 3 simbolius į paieškos langą bus siūlomi pilni paieškos tekstai
 	\item Vartotojas galės mokėjimo ruošinių ieškoti pagal pavadinimą, gavėją bei mokėjimo paskirtį
 	\item Kurdamas mokėjimo ruošinį vartotojas gaus bent 2 pasirinkimus jam sukurti.
+	\item Klientas galės įvesti sumą bei pradėti pavedimą pagrindiniame lange.
+	\item Klientas galės pasirinkti gavėją iš gavėjų arba ankstesnių gavėjų sąrašų.
+	\item Rinkdamasis gavėją iš pateiktų sąrašų, klientas galės atlikti pavedimą 3 mygtukų paspaudimu.
+	\item Pavedimo atlikimas truks ne ilgiau kaip 2 minutes.
 \end{itemize}
 \pagebreak
 \section{Įkvepiančios esamų interfeisų idėjos}
@@ -184,6 +219,22 @@ Veiklos trukmė: Mokėjimo ruošinio sukūrimas turėtų užtrukti iki 10 minuč
   \caption{Mygtukai iš mobiliosios aplikacijos}
 	\label{fig:mobileApp}
 	Nauda: Piktogramos visiems labiau suprantamos, lengviau skaitomos, jų pagalba norimus puslapius galima rasti greičiau.
+\end{figure}
+\begin{figure}[!htb]
+	\begin{center}
+	\includegraphics[scale=0.4]{mobileAppRecipientList.png}
+	\end{center}
+  \caption{Gavėjų sąrašas aplikacijoje}
+	\label{fig:mobileAppRecipientList}
+	Nauda: galima pasirinkti gavėją bei visą būtiną informaciją iš gavėjų sąrašo.
+\end{figure}
+\begin{figure}[!htb]
+	\begin{center}
+	\includegraphics[scale=0.4]{mobileAppPaymentForm.png}
+	\end{center}
+  \caption{Mokėjimo forma aplikacijoje}
+	\label{fig:mobileAppPaymentForm}
+	Nauda:  įvesti reikia tik būtiną, esminę informaciją, vartotojo neprašo įvesti nebūtinos informacijos.
 \end{figure}
 \begin{figure}[!htb]
   \includegraphics[width=\linewidth]{iconPlacement.png}
@@ -205,5 +256,4 @@ Veiklos trukmė: Mokėjimo ruošinio sukūrimas turėtų užtrukti iki 10 minuč
 	\label{fig:pagalbaGyvai}
 	Nauda: greitas pagalbos naudojantis puslapiu pasiekimas, piktogramą galima nesunkiai patraukti.
 \end{figure}
-\section{Terminų žodynėlis(maybe)}
 \end{document}
