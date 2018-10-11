@@ -27,7 +27,7 @@
 \department{Programų sistemų katedra}
 \papertype{Projektinis darbas}
 \title{Internetinio banko tinklalapis}
-\titleineng{Website of internet bank}
+\titleineng{Bankininkystė}
 \status{3 kurso 3 grupės studentai}
 \author{Justas Tvarijonas}
 \secondauthor{Džiugas Mažulis}   
@@ -40,12 +40,11 @@
 
 \tableofcontents
 \sectionnonum{Anotacija}
-Šiuo darbu siekiama išanalizuoti ir aprašyti dabartinės Swedbank sąsajos napatogumus, paaiškinti koks panaudojimo principas buvo pažeistas ir šio pažeidimo priežastis.
-Šiame darbe taip pat atkreipsime dėmesį į sistemos vartotojų grupes ir jų sąveika su sitema.
-Darbo eigoje apžvelgsime pasisekusias vartotojo sąsajos realizacijas ir aptarsime, kodėl būtent tokie sprendimai yra geresni už esamos sistemos sąsajų realizacijas.
+\subsectionnonum{Darbo tikslas}
+Naudojant į vartotoją orientuotą dizainą apibrėžti Swedbank internetinio banko dizaino pakeitimus.
 \begin{itemize}
 	\item Justas Tvarijonas - Tvarijonasjustas@gmail.com
-	\item Džiugas Mažulis -
+	\item Džiugas Mažulis - džiugas.mažulis@gmail.com
 	\item Michal Stankevič - michal.stankevic@gmail.com
 \end{itemize}
 \sectionnonum{Įvadas}
@@ -111,11 +110,8 @@ Veiklos trukmė: Informacijos paieška vidutiniškai užtrunka neilgai - iki 5 m
 	\item Neradus rezultatų nėra pasiūlomas joks situacijos sprendimas.
 \end{itemize}
 \subsubsectionnonum{Būsimasis patobulintas scenarijus}
-\begin{center}
-\textbf{Vartotojas norėdamas surasti informaciją apie banko nuomuojamus seifus:}
-\end{center}
 \begin{enumerate}
-	\item Paspaudžia ant paieškos mygtuko pagrindiniame lange
+	\item Vartotojas paspaudžia ant paieškos mygtuko pagrindiniame lange
 	\item Sistema atidaro naują langą, kuriame vartotojas gali įvesti raktinius žodžius
 	\item Vartotojas įvedęs raktinius žodžius gali atidaryti vieną iš rastų rezultatų, filtruoti rezultatus pagal kategorijas, pažiūrėti alternatyvius siūlomus raktinius žodžius.
 	\begin{enumerate}
@@ -140,6 +136,35 @@ Veiklos trukmė: Informacijos paieška vidutiniškai užtrunka neilgai - iki 5 m
 		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}
+\subsubsectionnonum{Mokėjimo ruošinio sukūrimo koncepcinis scenarijus}
+Antanas nori sukurti mokėjimo ruošinį pagal seniau atliktą mokėjimą, tačiau, kadangi nežino, kaip tai atlikti atlikti jis bando orientuotis pagal pavadinimus. Pasirinkęs kasdienes paslaugas ir peržvelges visus variantus per kelias minutes randa pasirinkimą "Mokėjimo ruošiniai" bei ant jo paspaudžia. Atsidariusiame lange pasirenka "Sukurti vietinį mokėjimo ruošinį", tačiau atsidarius naujam langui pamato, kad nebus pasirinkimo sukurti ruošinį pagal buvusį mokėjimą, todėl, norėdamas sužinoti gavėjo duomenis, nueina peržvelgti buvusius mokėjimus. Ten susiradęs reikiamą mokėjimą pamato, kad gali sukurti ruošinį pagal šį mokėjimą, taip ir padaro.
+\subsubsectionnonum{Mokėjimo ruošinio sukūrimo veiklų charakteristikos}
+Veiklos dažnis: Mokėjimo ruošinio sukūrimas yra retas veiksmas, todėl vartotojas kiekvieną kartą jį atlieka kaip iš naujo, todėl jis turėtų būti pakankamai aiškus ir paprastas. \par
+Veiklos trukmė: Mokėjimo ruošinio sukūrimas turėtų užtrukti iki 10 minučių.
+\subsubsectionnonum{Mokėjimo ruošinio sukūrimo problemos ir tobulinimo galimybės}
+\begin{itemize}
+	\item Mokėjimo ruošinių lange nėra pasirinkimo sukurti ruošinį pagal buvusius mokėjimus
+	\item Mokėjimo ruošinių paieška galima tik pagal jo pavadinima (tačiau ne pagal gavėją bei mokėjimo paskirtį)
+\end{itemize}
+\subsubsectionnonum{būsimasis patobulintas scenarijus}
+\begin{enumerate}
+	\item Vartotojas atsidaro mokėjimo ruošinių langą bei pasirenka sukurti vietinį mokėjimo ruošinį.
+	\item Sistema vartotojui duoda pasirinkima kurti mokėjimo ruošinį pagal buvusį mokėjimą arba kurti be jo.
+	\begin{enumerate}
+		\item Vartotojui pasirinkus kurti ruošinį pagal buvusį mokėjimą:
+		\begin{enumerate}
+			\item Sistema vartotojui atidaro naują langą, kuria rodomi buvę Mokėjimai
+			\item Vartotojas susirandą norimą mokėjimą bei jį pasirenka
+			\item Sistema vartotoja nukelia į mokėjimo ruošinio sukurimo langą, kuriame automatiškai užpildo laukus pagal pasirinktą buvusį mokėjimą
+			\item Vartotojas, sutikrines mokėjimo ruošinio laukus, pasirenka jį išsaugoti
+		\end{enumerate}
+		\item Vartotojui pasirinkus kurti mokėjimo ruošinį nuo nulio:
+		\begin{enumerate}
+			\item Sistema vartotojui atidaro mokėjimo ruošinio sukūrimo langą, kuriame visi laukai yra tušti
+			\item Vartotojas suveda reikiamus duomenis bei išsaugo mokėjimo ruošinį
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
 \subsection{Panaudojamumo siekiai ir matai}
 \begin{itemize}
 	\item Klientas galės pasiekti pavedimo langą nedaugiau kaip per 3 veiksmus.
@@ -147,6 +172,8 @@ Veiklos trukmė: Informacijos paieška vidutiniškai užtrunka neilgai - iki 5 m
 	\item Naudotojas galės filtruoti paieškos rezultatus pagal grupes
 	\item Naujas vartotojas paieškos langą surasti galės ne per ilgesnį laiką, nei 30 sekundžių.
 	\item Vartotojui įvedus ne mažiau, kaip 3 simbolius į paieškos langą bus siūlomi pilni paieškos tekstai
+	\item Vartotojas galės mokėjimo ruošinių ieškoti pagal pavadinimą, gavėją bei mokėjimo paskirtį
+	\item Kurdamas mokėjimo ruošinį vartotojas gaus bent 2 pasirinkimus jam sukurti.
 \end{itemize}
 \pagebreak
 \section{Įkvepiančios esamų interfeisų idėjos}
