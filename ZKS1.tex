@@ -15,6 +15,7 @@
 \usepackage{ltablex}
 \usepackage{longtable}
 \usepackage{wrapfig}
+\usepackage{enumitem}
 \usepackage{subfig}
 \usepackage{pbox}
 \renewcommand{\labelenumii}{\theenumii}
@@ -114,17 +115,19 @@ Veiklos trukmė: mokėjimo pavedimas internetinės bankininkystės sistemoje už
 \textbf{Vartotojas norėdamas atlikti mokėjimo pavedimą:}
 \end{center}
 \begin{enumerate}
-	\item Pagrindiniame lange į teksto lauką įveda pinigų sumą bei paspaudžia mygtuką „Siųsti pinigus“
-	\item Įvesdamas duomenis
-	\begin{enumerate}
-		\item Pasirenka gavėją iš „Gavėjų sąrašo“
-		\item Pasirenka gavėją iš „Ankstesni“
-		\item Suveda gavėjo sąskaitos numerį
-		\begin{enumerate}
-			\item Į lauką „Gavėjo vardas, pavardė (įmonės pav.)“ įveda gavėjo pavadinimą
-		\end{enumerate}
-	\end{enumerate}
-	\item Paspaudžia mygtuką „Patvirtinti mokėjimą“
+	\item Vartotojas įveda pinigų sumą
+	\item Sistema pateikia gavėjų sąrašą, kuriame nurodomi gavėjų vardai ir banko sąskaitos, galimybę įvesti gavėjo duomenis 
+	\item Vartotojas įvesdamas duomenis
+\begin{enumerate}
+	\item Pasirenka gavėją iš gavėjų sąrašo
+	\item Pasirenka įvesti duomenis
+\begin{enumerate}
+	\item Sistema pavaizduoja mokėjimo formą
+	\item Vartotojas įveda gavėjo duomenis
+\end{enumerate}
+\end{enumerate}
+	\item Vartotojas patvirtina mokėjimą
+	\item Sistema rodo mokėjimo patvirtinimą
 \end{enumerate}
 \subsubsection{Informacijos paieškos koncepcinis scenarijus}
 Jonas ieško kaip gali išsinuomuoti saugyklą banke, pasirinkęs "Mano bankas" pamato ilgą sarašą informacijos, tačiau jį peržvelgęs nerando norimos informacijos, dar kartą atydžiai peržvelgia naudingos informacijos nuorodų grupę, tačiau vistiek neranda norimo puslapio nuorodos. Tik tada pamato, kad dešiniąjame lango kampe yra paieškos logotipas, jį paspaudus įveda "seifo nuoma" į paieškos langą, tačiau paieška neranda nieko prasmingo. Galiausiai neapsikentęs jis parašo žinutę banko dorbuotojui, kuris jam atsiunčia nuorodą į ieškomą puslapį, bei praneša, kad šios informacijos reikia ieškoti neprisijungus prie banko. 
@@ -221,6 +224,7 @@ Pasirinkus laikotarpio pradžios mėnesį nėra numatytosios dienos reikšmės (
 	\item Vartotojas pasirenka „Pateikti užklausą"
 \end{enumerate}
 \subsection{Panaudojamumo siekiai ir matai}
+	\textbf{Bendri:}
 \begin{enumerate}
 	\item Naudotojas galės filtruoti paieškos rezultatus pagal skirtingas rastas grupes
 	\item Naujas vartotojas paieškos langą surasti galės ne per ilgesnį laiką, nei 30 sekundžių.
@@ -238,6 +242,18 @@ Pasirinkus laikotarpio pradžios mėnesį nėra numatytosios dienos reikšmės (
 	\item Mokėjimo išrašo datos apsibrėžime nebus būtina pasirinkti dieną (užteks mėnesio).
 	\item 97\% patyrusių klientų iš pirmo karto pasirinks norimą datą mokėjimo išrašui gauti.
 	\item Išrašo rezultatus bus galima filtruoti bent 4 būdais.
+\end{enumerate}
+	\textbf{Naujokų:}
+\begin{enumerate}[resume]
+  \item
+\end{enumerate}
+	\textbf{Vidutiniškai patyrusių:}
+\begin{enumerate}[resume]
+	\item
+\end{enumerate}
+\textbf{Patyrusių:}
+\begin{enumerate}[resume]
+	\item
 \end{enumerate}
 \pagebreak
 \section{Įkvepiančios esamų interfeisų idėjos}
