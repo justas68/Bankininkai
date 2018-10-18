@@ -65,7 +65,7 @@ Pirmojo laboratorinio darbo reikalavimai.
 \begin{itemize}
 	\item Pirminiai - Banko klientai, betarpiškai naudojasi sistema.
 	\item Antriniai - neegzistuoja.
-	\item Tretiniai - SEB, Luminori - bankai kurių klientų skaičių įtakoja šio banko kokybinės charakteristikos, bei naujai pritraukiamų klientų skaičius. Akcininkai, kurių pajamos priklauso nuo banko klientų skaičiaus.
+	\item Tretiniai - SEB, Luminor - bankai kurių klientų skaičių įtakoja šio banko kokybinės charakteristikos, bei naujai pritraukiamų klientų skaičius. Akcininkai, kurių pajamos priklauso nuo banko klientų skaičiaus.
 \end{itemize}
 \section{Banko klientų poreikiai}
 \subsection{Naudotojų charakteristikos}
@@ -208,9 +208,11 @@ Veiklos trukmė: Mokėjimo ruošinio sukūrimas turėtų užtrukti iki 10 minuč
 	\end{enumerate}
 \end{enumerate}
 \subsubsection{Sąskaitos išrašų tikrinimo konceptualus scenarijus}
-Džiugas nori pažiūrėti kelių paskutinių mėnesių sąskaitos išrašą. Prisijungęs prie internetinio banko, antroje nuo viršaus esančioje meniu juostoje pasirenka skyrelį „Kasdienės paslaugos”. Pasirodžiusiame meniu spaudžia nuorodą „Išrašas”. Išrašo sukūrimui sistema reikalauja sąskaitos pavadinimo bei laikotarpio, kurio metu sąskaitoje vyko finansinės operacijos. Išrašo laikotarpį apibrėžiantys formos laukai turi numatytasiąs reikšmes: einamojo mėnesio pirmoji diena ir šiandieninė data. Tikėdamasis gauti išrašą apie kelis mėnesius sąskaitos naudojimo, Džiugas keičia pradinės datos reikšmę - spaudžia ant lauko, išskleidžiamas kalendorius, kuriame jis renkasi norimą mėnesį ir pirmą dieną. Paspaudęs „Pateikti užklausą", jis išvysta sugeneruotą išrašą. Peržvelgęs jį, Džiugas nori praplėsti laikotarpį dviem mėnesiams atgaline data. Dėl to jis privalo vėl keisti pradinės datos reikšmę: mėnesį ir dieną, nors jam užtektų pakeisti tik mėnesį.
+Džiugas nori pažiūrėti kelių paskutinių mėnesių sąskaitos išrašą. Prisijungęs prie internetinio banko, atitinkamuose meniu skiltyse pasirenka „Kasdienės paslaugos”, vėliau - „Išrašas”. Išrašo sukūrimui sistema reikalauja sąskaitos pavadinimo bei laikotarpio, kurio metu sąskaitoje vyko finansinės operacijos. Išrašo laikotarpį apibrėžiantys formos laukai turi numatytasiąs reikšmes: einamojo mėnesio pirmoji diena ir šiandieninė data. Tikėdamasis gauti išrašą apie kelis mėnesius sąskaitos naudojimo, Džiugas keičia pradinės datos reikšmę - spaudžia ant lauko, išskleidžiamas kalendorius, kuriame jis renkasi norimą mėnesį ir pirmą dieną. Paspaudęs „Pateikti užklausą", jis išvysta sugeneruotą išrašą. Peržvelgęs jį, Džiugas nori praplėsti laikotarpį dviem mėnesiams atgaline data. Dėl to jis privalo vėl keisti pradinės datos reikšmę: mėnesį ir dieną, nors jam užtektų pakeisti tik mėnesį.
 \subsubsection{Sąskaitos išrašų tikrinimo veiklų charakteristikos}
 Veiklos dažnis: Sąskaitos išrašo tikrinimo dažnis varijuoja. Įprasti klientai retai tikrina sąskaitų išrašus. 
+
+Funkcijos pasiekiamumas: vartotojas funkciją pasiekia dviem žingsniais. Norint pakartoti veiksmą, tereikia pakeisti datą.
 \subsubsection{Sąskaitos išrašų tikrinimo problemos ir tobulinimo galimybės}
 Pasirinkus laikotarpio pradžios mėnesį nėra numatytosios dienos reikšmės (1). Dėl to kiekvieną kartą norint pakeistį mėnesį, reikės pasirinkti dieną. (Vidutiniškai) patyrusį vartotoją papildomo žingsnio atkartojimas erzins. Taigi tobulintinas aspektas yra numatytosios dienos pridėjimas į išrašo laikotarpio pradžią, kai pasirenkamas mėnuo.
 \subsubsection{Būsimasis patobulintas scenarijus}
