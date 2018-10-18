@@ -54,7 +54,7 @@ Naudojant į vartotoją orientuotą dizainą palengvinti bei pagerinti Swedbank 
 \subsectionnonum{Dalykinė sritis}
 Internetinė bankininkystė.
 \subsectionnonum{Probleminė sritis}
-Vartotojo grafinės sąsajas patogumo gerinimas, patogus informacijos pateikimas.
+Vartotojo grafinės sąsajas patogumo gerinimas, pagrindinėms funkcijoms pasiekti atliekamų žingsnių bet klaidų mažinimas.
 \subsectionnonum{Naudotojai}
 Banko klientas - turi galimybę atlikti mokėjimus, peržiūrėti sąskaitos išrašus, kurti mokėjimo ruošinius, ieškoti reikalingos informacijos.
 \subsectionnonum{Darbo pagrindas}
@@ -64,19 +64,19 @@ Pirmojo laboratorinio darbo reikalavimai.
 \begin{itemize}
 	\item Pirminiai - Banko klientai, betarpiškai naudojasi sistema.
 	\item Antriniai - neegzistuoja.
-	\item Tretiniai - Kiti bankai, kurių klientų skaičių įtakoja šio banko sekmė, bei akcininkai, kurių pajamos priklauso nuo banko sėkmės.
+	\item Tretiniai - SEB, Luminori - bankai kurių klientų skaičių įtakoja šio banko kokybinės charakteristikos, bei naujai pritraukiamų klientų skaičius. Akcininkai, kurių pajamos priklauso nuo banko klientų skaičiaus.
 \end{itemize}
 \section{Banko klientų poreikiai}
 \subsection{Naudotojų charakteristikos}
 \subsubsection{Informacinių technologijų priemonės}
 \begin{itemize}
 	\item Išmanusis telefonas (naršyklė bei Smart-ID).
-	\item Mobilusis parašas.
 	\item Asmeninių kompiuterių naršyklės.
 	\item Planšetinių kompiuterių naršyklės.
 \end{itemize}
 \subsubsection{Motyvacija ir galimybės tobulinti įgūdžius}
 \begin{itemize}
+	\item Motyvacija - didelė (pasirašyta sutartis su banku).
 	\item Klientai turi skirtingus IT įgūdžius.
 	\item Klientai skirtingais dažnumais naudojasi elektronine bankininkyste.
 \end{itemize}
@@ -96,12 +96,12 @@ Pirmojo laboratorinio darbo reikalavimai.
 	\item Ekspertai - šie sistemos naudotojai puikiai išmano sistemą, jiems patogus didelio funkcionalumo sudėtingas interfeisas. Juos erzina didelis žingsnių skaičius bei į naujokus orientuota vartotojo sąsaja.
 \end{itemize}
 \subsection{Kompiuterizuojamų veiklų analizė}
-\subsubsectionnonum{Mokėjimo pavedimų koncepcinis scenarijus}
+\subsubsection{Mokėjimo pavedimų koncepcinis scenarijus}
 Kęstas nori pervesti pinigus į draugo sąskaitą, tačiau pagrindiniame lange neranda pinigų pavedimo funkcijos. Nežinodamas ar „Vietiniai mokėjimai“ yra tai, ko jam reikia, jis meniu juostoje paspaudžia „Mano bankas“. Neradęs tinkamo pasirinkimo Petras meniu juostoje spusteli „Kasdieninės paslaugos“, tačiau jį suglumina skiltyje „Mokėjimai“ atsiradę pasirinkimai: „Mokėjimo pavedimai“, „Vietiniai mokėjimai“, „Įmokos“, „E. sąskaitos“. Pasirinktame „Mokėjimo pavedimai“ lange klientas nežino ką įvesti „Gavėjo pavadinimas“ skiltyje, tik paspaudęs ant klaustuko simbolio sužino, jog įvesti reikia draugo vardą ir pavardę. Visą sąskaitos numerį Petras turi vesti ranka, nors jau yra ankščiau pervedęs draugui pinigų. Įvedęs visus duomenis bei paspaudęs toliau vartotojas atsiduria vietinių mokėjimų lange, kuriame turi įvesti gavėjo šalį, adresą. Paspaudęs mygtuką „Toliau“ Petras perveda draugui pinigus.
-\subsubsectionnonum{Mokėjimo pavedimų veiklų charakteristikos}
+\subsubsection{Mokėjimo pavedimų veiklų charakteristikos}
 Veiklos dažnis: mokėjimo pavedimai yra esminė bei dažniausiai naudojama elektroninės bankininkystės funkcija: apie 10-15 kartų per mėnesį. Privaloma užtikrinti akivaizdų, vienprasmišką bei vieno mygtuko paspaudimu pasiekiamą pagrindinį funkcionalumą norint greitai ir rezultatyviai atlikti pavedimus. Įvesties langai turi būti aiškiai suprantami bei pasirinkus siųsti pinigus sistema privalo pasiūlyti pasirinkti gavėją iš gavėjų sąrašo arba ankstesnių gavėjų. Iš banko sąskaitos galima atpažinti gavėjo šalį, todėl sistema neturėtų reikalauti šio parametro. \par 
 Veiklos trukmė: mokėjimo pavedimas internetinės bankininkystės sistemoje užtrunka nuo 2 iki 5 minučių.
-\subsubsectionnonum{Mokėjimo pavedimų problemos ir tobulinimo galimybės}
+\subsubsection{Mokėjimo pavedimų problemos ir tobulinimo galimybės}
 \begin{itemize}
 	\item Mokėjimo pavedimo funkcija vizualiai neatkreipia dėmesio bei yra neaiškaus pavadinimo.
 	\item Mokėjimų skiltyje per daug pavedimo interpretacijų.
@@ -109,7 +109,7 @@ Veiklos trukmė: mokėjimo pavedimas internetinės bankininkystės sistemoje už
 	\item Sistema neteikia galimybės pasirinkti anksčiau naudotą gavėją arba gavėją iš sąrašo.
 	\item Sistema iš banko sąskaitos neatpažįsta gavėjo šalies.
 \end{itemize}
-\subsubsectionnonum{Būsimasis patobulintas scenarijus}
+\subsubsection{Būsimasis patobulintas scenarijus}
 \begin{center}
 \textbf{Vartotojas norėdamas atlikti mokėjimo pavedimą:}
 \end{center}
@@ -126,19 +126,19 @@ Veiklos trukmė: mokėjimo pavedimas internetinės bankininkystės sistemoje už
 	\end{enumerate}
 	\item Paspaudžia mygtuką „Patvirtinti mokėjimą“
 \end{enumerate}
-\subsubsectionnonum{Informacijos paieškos koncepcinis scenarijus}
+\subsubsection{Informacijos paieškos koncepcinis scenarijus}
 Jonas ieško kaip gali išsinuomuoti saugyklą banke, pasirinkęs "Mano bankas" pamato ilgą sarašą informacijos, tačiau jį peržvelgęs nerando norimos informacijos, dar kartą atydžiai peržvelgia naudingos informacijos nuorodų grupę, tačiau vistiek neranda norimo puslapio nuorodos. Tik tada pamato, kad dešiniąjame lango kampe yra paieškos logotipas, jį paspaudus įveda "seifo nuoma" į paieškos langą, tačiau paieška neranda nieko prasmingo. Galiausiai neapsikentęs jis parašo žinutę banko dorbuotojui, kuris jam atsiunčia nuorodą į ieškomą puslapį, bei praneša, kad šios informacijos reikia ieškoti neprisijungus prie banko. 
-\subsubsectionnonum{Informacijos paieškos veiklų charakteristikos}
+\subsubsection{Informacijos paieškos veiklų charakteristikos}
 Veiklos dažnis: Informacijos paieška banko internetinėje svetainėje paprastai nėra dažna: apie 5-6 kartus į metus, todėl jos pasiekimas turėtų būti pakankamai akivaizdus. Neradus rezultatų siūlytų panašius arba atidaryti bendravymo gyvai langą, kuriame vartotojas galėtų sužinoti norimą informaciją. \par
 Veiklos trukmė: Informacijos paieška vidutiniškai užtrunka neilgai - iki 5 minučių.
-\subsubsectionnonum{Informacijos paieškos problemos ir tobulinimo galimybės}
+\subsubsection{Informacijos paieškos problemos ir tobulinimo galimybės}
 \begin{itemize}
 	\item Paieškos lango pozicija nėra akivaizdi.
 	\item Paieškos rezultatų negalima sugrupuoti.
 	\item Paieška informacijos ieško ne iš viso galimo informacinio lauko.
 	\item Neradus rezultatų nėra pasiūlomas joks situacijos sprendimas.
 \end{itemize}
-\subsubsectionnonum{Būsimasis patobulintas scenarijus}
+\subsubsection{Būsimasis patobulintas scenarijus}
 \begin{center}
 	\textbf{Vartotojas norėdamas surasti informacijos apie seifų nuoma:}
 \end{center}
@@ -168,17 +168,17 @@ Veiklos trukmė: Informacijos paieška vidutiniškai užtrunka neilgai - iki 5 m
 		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}
-\subsubsectionnonum{Mokėjimo ruošinio sukūrimo koncepcinis scenarijus}
+\subsubsection{Mokėjimo ruošinio sukūrimo koncepcinis scenarijus}
 Antanas nori sukurti mokėjimo ruošinį pagal seniau atliktą mokėjimą, tačiau, kadangi nežino, kaip tai atlikti jis bando orientuotis pagal pavadinimus. Pasirinkęs kasdienes paslaugas ir peržvelges visus variantus per kelias minutes randa pasirinkimą "Mokėjimo ruošiniai" bei ant jo paspaudžia. Atsidariusiame lange pasirenka "Sukurti vietinį mokėjimo ruošinį", tačiau atsidarius naujam langui pamato, kad nebus pasirinkimo sukurti ruošinį pagal buvusį mokėjimą, todėl, norėdamas sužinoti gavėjo duomenis, nueina peržvelgti buvusius mokėjimus. Ten susiradęs reikiamą mokėjimą pamato, kad gali sukurti ruošinį pagal šį mokėjimą, taip ir padaro.
-\subsubsectionnonum{Mokėjimo ruošinio sukūrimo veiklų charakteristikos}
+\subsubsection{Mokėjimo ruošinio sukūrimo veiklų charakteristikos}
 Veiklos dažnis: Mokėjimo ruošinio sukūrimas yra retas veiksmas, todėl vartotojas kiekvieną kartą jį atlieka kaip iš naujo, todėl jis turėtų būti pakankamai aiškus ir paprastas. \par
 Veiklos trukmė: Mokėjimo ruošinio sukūrimas turėtų užtrukti iki 10 minučių.
-\subsubsectionnonum{Mokėjimo ruošinio sukūrimo problemos ir tobulinimo galimybės}
+\subsubsection{Mokėjimo ruošinio sukūrimo problemos ir tobulinimo galimybės}
 \begin{itemize}
 	\item Mokėjimo ruošinių lange nėra pasirinkimo sukurti ruošinį pagal buvusius mokėjimus
 	\item Mokėjimo ruošinių paieška galima tik pagal jo pavadinima (tačiau ne pagal gavėją bei mokėjimo paskirtį)
 \end{itemize}
-\subsubsectionnonum{Būsimasis patobulintas scenarijus}
+\subsubsection{Būsimasis patobulintas scenarijus}
 \begin{center}
 	\textbf{Vartotojas norėdamas sukurti mokėjimo ruošinį:}
 \end{center}
@@ -200,13 +200,13 @@ Veiklos trukmė: Mokėjimo ruošinio sukūrimas turėtų užtrukti iki 10 minuč
 		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}
-\subsubsectionnonum{Sąskaitos išrašų tikrinimo konceptualus scenarijus}
+\subsubsection{Sąskaitos išrašų tikrinimo konceptualus scenarijus}
 Džiugas nori pažiūrėti kelių paskutinių mėnesių sąskaitos išrašą. Prisijungęs prie internetinio banko, antroje nuo viršaus esančioje meniu juostoje pasirenka skyrelį „Kasdienės paslaugos”. Pasirodžiusiame meniu spaudžia nuorodą „Išrašas”. Išrašo sukūrimui sistema reikalauja sąskaitos pavadinimo bei laikotarpio, kurio metu sąskaitoje vyko finansinės operacijos. Išrašo laikotarpį apibrėžiantys formos laukai turi numatytasiąs reikšmes: einamojo mėnesio pirmoji diena ir šiandieninė data. Tikėdamasis gauti išrašą apie kelis mėnesius sąskaitos naudojimo, Džiugas keičia pradinės datos reikšmę - spaudžia ant lauko, išskleidžiamas kalendorius, kuriame jis renkasi norimą mėnesį ir pirmą dieną. Paspaudęs „Pateikti užklausą", jis išvysta sugeneruotą išrašą. Peržvelgęs jį, Džiugas nori praplėsti laikotarpį dviem mėnesiams atgaline data. Dėl to jis privalo vėl keisti pradinės datos reikšmę: mėnesį ir dieną, nors jam užtektų pakeisti tik mėnesį.
-\subsubsectionnonum{Sąskaitos išrašų tikrinimo veiklų charakteristikos}
+\subsubsection{Sąskaitos išrašų tikrinimo veiklų charakteristikos}
 Veiklos dažnis: Sąskaitos išrašo tikrinimo dažnis varijuoja. Įprasti klientai retai tikrina sąskaitų išrašus. 
-\subsubsectionnonum{Sąskaitos išrašų tikrinimo problemos ir tobulinimo galimybės}
+\subsubsection{Sąskaitos išrašų tikrinimo problemos ir tobulinimo galimybės}
 Pasirinkus laikotarpio pradžios mėnesį nėra numatytosios dienos reikšmės (1). Dėl to kiekvieną kartą norint pakeistį mėnesį, reikės pasirinkti dieną. (Vidutiniškai) patyrusį vartotoją papildomo žingsnio atkartojimas erzins. Taigi tobulintinas aspektas yra numatytosios dienos pridėjimas į išrašo laikotarpio pradžią, kai pasirenkamas mėnuo.
-\subsubsectionnonum{Būsimasis patobulintas scenarijus}
+\subsubsection{Būsimasis patobulintas scenarijus}
 \begin{center}
 	\textbf{Vartotojas norėdamas peržiūrėti sąskaitos išrašą:}
 \end{center}
@@ -217,7 +217,7 @@ Pasirinkus laikotarpio pradžios mėnesį nėra numatytosios dienos reikšmės (
 	\item Vartotojas pasirenka „Pateikti užklausą"
 \end{enumerate}
 \subsection{Panaudojamumo siekiai ir matai}
-\begin{itemize}
+\begin{enumerate}
 	\item Naudotojas galės filtruoti paieškos rezultatus pagal skirtingas rastas grupes
 	\item Naujas vartotojas paieškos langą surasti galės ne per ilgesnį laiką, nei 30 sekundžių.
 	\item 90\% paieškų bus rezultatyvios.
@@ -234,14 +234,14 @@ Pasirinkus laikotarpio pradžios mėnesį nėra numatytosios dienos reikšmės (
 	\item Mokėjimo išrašo datos apsibrėžime nebus būtina pasirinkti dieną (užteks mėnesio).
 	\item 95\% klientų iš pirmo karto pasirinks norimą datą mokėjimo išrašui gauti.
 	\item Išrašo rezultatus bus galima filtruoti bent 4 būdais.
-\end{itemize}
+\end{enumerate}
 \pagebreak
 \section{Įkvepiančios esamų interfeisų idėjos}
 \begin{figure}[!htb]
 	\begin{center}
 	\includegraphics[scale=0.4]{mobileApp.png}
 	\end{center}
-  \caption{Mygtukai iš mobiliosios aplikacijos}
+  \caption{Mygtukai iš mobiliosios aplikacijos (Swedbank mobilioji programėlė)}
 	\label{fig:mobileApp}
 	Nauda: Piktogramos visiems labiau suprantamos, lengviau skaitomos, jų pagalba norimus puslapius galima rasti greičiau.
 \end{figure}
@@ -249,7 +249,7 @@ Pasirinkus laikotarpio pradžios mėnesį nėra numatytosios dienos reikšmės (
 	\begin{center}
 	\includegraphics[scale=0.4]{mobileAppRecipientList.png}
 	\end{center}
-  \caption{Gavėjų sąrašas aplikacijoje}
+  \caption{Gavėjų sąrašas aplikacijoje (Swedbank mobilioji programėlė)}
 	\label{fig:mobileAppRecipientList}
 	Nauda: galima pasirinkti gavėją bei visą būtiną informaciją iš gavėjų sąrašo.
 \end{figure}
@@ -257,19 +257,19 @@ Pasirinkus laikotarpio pradžios mėnesį nėra numatytosios dienos reikšmės (
 	\begin{center}
 	\includegraphics[scale=0.4]{mobileAppPaymentForm.png}
 	\end{center}
-  \caption{Mokėjimo forma aplikacijoje}
+  \caption{Mokėjimo forma aplikacijoje (Swedbank mobilioji programėlė)}
 	\label{fig:mobileAppPaymentForm}
 	Nauda:  įvesti reikia tik būtiną, esminę informaciją, vartotojo neprašo įvesti nebūtinos informacijos.
 \end{figure}
 \begin{figure}[!htb]
   \includegraphics[width=\linewidth]{iconPlacement.png}
-  \caption{Mygtukų išdėstymas svetainėje}
+  \caption{Mygtukų išdėstymas svetainėje (www.unibank.com)}
 	\label{fig:iconPlacement}
 	Nauda: Vartotojui aiškus meniu, greitas vaikščiojimas tarp puslapių.
 \end{figure}
 \begin{figure}[!htb]
   \includegraphics[width=\linewidth]{SearchWindow.png}
-  \caption{Informacijos paieškos langas}
+  \caption{Informacijos paieškos langas (swiftype.com)}
 	\label{fig:searchWindow}
 	Nauda: Vendant tekstą ieškoma po kiekvieno įvesto simbolio, galima filtruoti pagal skirtingas grupes.
 \end{figure}
@@ -277,7 +277,7 @@ Pasirinkus laikotarpio pradžios mėnesį nėra numatytosios dienos reikšmės (
 	\begin{center}
 	\includegraphics[scale=0.2]{pagalbaGyvai.png}
 	\end{center}
-  \caption{Piktograma susisiekimui su pagalba gyvai}
+  \caption{Piktograma susisiekimui su pagalba gyvai (Messenger programėlė)}
 	\label{fig:pagalbaGyvai}
 	Nauda: greitas pagalbos naudojantis puslapiu pasiekimas, piktogramą galima nesunkiai patraukti.
 \end{figure}
@@ -295,7 +295,7 @@ Pasirinkus laikotarpio pradžios mėnesį nėra numatytosios dienos reikšmės (
 		\includegraphics
 		{calendar.png}
 	\end{center}
-	\caption{Datos pasirinkimas}
+	\caption{Datos pasirinkimas (sj.se)}
 	\label{fig:calendar}
 	Nauda: Aiškus, greitas pasirinkimas, nereikia papildomų paspaudimų keičiant tik mėnesį/metus.
 \end{figure}
