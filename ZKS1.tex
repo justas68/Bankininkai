@@ -54,7 +54,7 @@ Naudojant į vartotoją orientuotą dizainą palengvinti bei pagerinti Swedbank 
 \subsectionnonum{Dalykinė sritis}
 Internetinė bankininkystė.
 \subsectionnonum{Probleminė sritis}
-Vartotojo grafinės sąsajas patogumo gerinimas, pagrindinėms funkcijoms pasiekti atliekamų žingsnių bet klaidų mažinimas.
+Vartotojo grafinės sąsajos išmokstamumo gerinimas, pagrindinėms funkcijoms pasiekti atliekamų žingsnių bet klaidų mažinimas.
 \subsectionnonum{Naudotojai}
 Banko klientas - turi galimybę atlikti mokėjimus, peržiūrėti sąskaitos išrašus, kurti mokėjimo ruošinius, ieškoti reikalingos informacijos.
 \subsectionnonum{Darbo pagrindas}
@@ -129,7 +129,7 @@ Veiklos trukmė: mokėjimo pavedimas internetinės bankininkystės sistemoje už
 \subsubsection{Informacijos paieškos koncepcinis scenarijus}
 Jonas ieško kaip gali išsinuomuoti saugyklą banke, pasirinkęs "Mano bankas" pamato ilgą sarašą informacijos, tačiau jį peržvelgęs nerando norimos informacijos, dar kartą atydžiai peržvelgia naudingos informacijos nuorodų grupę, tačiau vistiek neranda norimo puslapio nuorodos. Tik tada pamato, kad dešiniąjame lango kampe yra paieškos logotipas, jį paspaudus įveda "seifo nuoma" į paieškos langą, tačiau paieška neranda nieko prasmingo. Galiausiai neapsikentęs jis parašo žinutę banko dorbuotojui, kuris jam atsiunčia nuorodą į ieškomą puslapį, bei praneša, kad šios informacijos reikia ieškoti neprisijungus prie banko. 
 \subsubsection{Informacijos paieškos veiklų charakteristikos}
-Veiklos dažnis: Informacijos paieška banko internetinėje svetainėje paprastai nėra dažna: apie 5-6 kartus į metus, todėl jos pasiekimas turėtų būti pakankamai akivaizdus. Neradus rezultatų siūlytų panašius arba atidaryti bendravymo gyvai langą, kuriame vartotojas galėtų sužinoti norimą informaciją. \par
+Veiklos dažnis: Informacijos paieška banko internetinėje svetainėje paprastai nėra dažna: apie 5-6 kartus į metus, todėl jos pasiekimas turėtų būti pakankamai akivaizdus. Neradus rezultatų siūlytų panašius arba atidaryti bendravimo gyvai langą, kuriame vartotojas galėtų sužinoti norimą informaciją. \par
 Veiklos trukmė: Informacijos paieška vidutiniškai užtrunka neilgai - iki 5 minučių.
 \subsubsection{Informacijos paieškos problemos ir tobulinimo galimybės}
 \begin{itemize}
@@ -137,13 +137,14 @@ Veiklos trukmė: Informacijos paieška vidutiniškai užtrunka neilgai - iki 5 m
 	\item Paieškos rezultatų negalima sugrupuoti.
 	\item Paieška informacijos ieško ne iš viso galimo informacinio lauko.
 	\item Neradus rezultatų nėra pasiūlomas joks situacijos sprendimas.
+	\item Atidarius vieną iš variantų, vartotojui nėra galimybė mygtuko paspaudimu sugrįžti atgal.
 \end{itemize}
 \subsubsection{Būsimasis patobulintas scenarijus}
 \begin{center}
 	\textbf{Vartotojas norėdamas surasti informacijos apie seifų nuoma:}
 \end{center}
 \begin{enumerate}
-	\item Vartotojas paspaudžia ant paieškos mygtuko pagrindiniame lange
+	\item Paspaudžia ant paieškos mygtuko pagrindiniame lange
 	\item Sistema atidaro naują langą, kuriame vartotojas gali įvesti raktinius žodžius
 	\item Vartotojas įvedęs raktinius žodžius gali atidaryti vieną iš rastų rezultatų, filtruoti rezultatus pagal kategorijas, pažiūrėti alternatyvius siūlomus raktinius žodžius.
 	\begin{enumerate}
@@ -163,8 +164,11 @@ Veiklos trukmė: Informacijos paieška vidutiniškai užtrunka neilgai - iki 5 m
 	\begin{enumerate}
 		\item pasirinkęs peržiūrėti alternatyvius siūlomus variantus:
 		\begin{enumerate}
+			\item Sistema parodo siūlomus variantus
+			\begin{enumerate}
 			\item gali pasirinkti vieną iš siūlomų variantų ir ieškoti iš naujo
 			\item toliau žiūrėti jau rastus rezultatus
+			\end{enumerate}
 		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}
@@ -183,7 +187,7 @@ Veiklos trukmė: Mokėjimo ruošinio sukūrimas turėtų užtrukti iki 10 minuč
 	\textbf{Vartotojas norėdamas sukurti mokėjimo ruošinį:}
 \end{center}
 \begin{enumerate}
-	\item Vartotojas atsidaro mokėjimo ruošinių langą bei pasirenka sukurti vietinį mokėjimo ruošinį.
+	\item atsidaro mokėjimo ruošinių langą bei pasirenka sukurti vietinį mokėjimo ruošinį.
 	\item Sistema vartotojui duoda pasirinkima kurti mokėjimo ruošinį pagal buvusį mokėjimą arba kurti be jo.
 	\begin{enumerate}
 		\item Vartotojui pasirinkus kurti ruošinį pagal buvusį mokėjimą:
@@ -191,7 +195,7 @@ Veiklos trukmė: Mokėjimo ruošinio sukūrimas turėtų užtrukti iki 10 minuč
 			\item Sistema vartotojui atidaro naują langą, kuria rodomi buvę Mokėjimai
 			\item Vartotojas susirandą norimą mokėjimą bei jį pasirenka
 			\item Sistema vartotoja nukelia į mokėjimo ruošinio sukurimo langą, kuriame automatiškai užpildo laukus pagal pasirinktą buvusį mokėjimą
-			\item Vartotojas, sutikrines mokėjimo ruošinio laukus, pasirenka jį išsaugoti
+			\item Vartotojas, patikrinęs mokėjimo ruošinio laukus, pasirenka jį išsaugoti
 		\end{enumerate}
 		\item Vartotojui pasirinkus kurti mokėjimo ruošinį nuo nulio:
 		\begin{enumerate}
@@ -220,7 +224,7 @@ Pasirinkus laikotarpio pradžios mėnesį nėra numatytosios dienos reikšmės (
 \begin{enumerate}
 	\item Naudotojas galės filtruoti paieškos rezultatus pagal skirtingas rastas grupes
 	\item Naujas vartotojas paieškos langą surasti galės ne per ilgesnį laiką, nei 30 sekundžių.
-	\item 90\% paieškų bus rezultatyvios.
+	\item 80\% paieškų bus rezultatyvios.
 	\item Vartotojui įvedus ne mažiau, kaip 3 simbolius į paieškos langą bus siūlomi pilni paieškos tekstai
 	\item Vartotojas galės mokėjimo ruošinių ieškoti pagal pavadinimą, gavėją bei mokėjimo paskirtį
 	\item Mokėjimo ruošinio sukurimo langą vartotojas galės pasiekti ne per daugiau, negu 3 mygtukų paspaudimus.
@@ -229,10 +233,10 @@ Pasirinkus laikotarpio pradžios mėnesį nėra numatytosios dienos reikšmės (
 	\item Klientas galės pasirinkti gavėją iš gavėjų arba ankstesnių gavėjų sąrašų.
 	\item Rinkdamasis gavėją iš pateiktų sąrašų, klientas galės atlikti pavedimą 3 mygtukų paspaudimu.
 	\item Pavedimo atlikimas truks ne ilgiau kaip 2 minutes.
-	\item 97\% klientų iš pirmo karto ras kaip atlikti pavedimą.
+	\item 97\% vidutiniškai patyrusių klientų iš pirmo karto ras kaip atlikti pavedimą.
 	\item Vartotojas mokėjimų išrašo langą pasieks ne per daugiau, nei 2 mygtuko paspaudymus.
 	\item Mokėjimo išrašo datos apsibrėžime nebus būtina pasirinkti dieną (užteks mėnesio).
-	\item 95\% klientų iš pirmo karto pasirinks norimą datą mokėjimo išrašui gauti.
+	\item 97\% patyrusių klientų iš pirmo karto pasirinks norimą datą mokėjimo išrašui gauti.
 	\item Išrašo rezultatus bus galima filtruoti bent 4 būdais.
 \end{enumerate}
 \pagebreak
