@@ -7,6 +7,7 @@
 \usepackage{amsmath}
 \usepackage{bm}
 \usepackage{caption}
+\usepackage{hyperref}
 \usepackage{color}
 \usepackage{float}
 \usepackage{graphicx}
@@ -67,13 +68,26 @@ Trečiojo laboratorinio darbo reikalavimai.
 \subsection{Euristinis tikrinimas}
 \begin{center}
 	\begin{table}[h]
-\begin{tabular}{|p{3cm}|p{4cm}|p{8.1cm}|}
+\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{8.1cm}|}
   \hline
-  Euristika & Defekto sunkumas & Komentaras \\ \hline
+	Euristika & Defekto sunkumas & Komentaras \\ \hline
+	Būsenos matomumas & Vidutinis & Vartotojas savo buvimo vietą mato tik būdamas pirmame hierarchijos sluoksnyje, jam einant į gylesnius sluoksnius, jis gali užmiršti kokioje vietoje yra. \\ \hline
+	Sistemos atitikimas realiam pasauliui & Lengvas & Vietinių mokėjimų lange vartotojui gali būti ne akivaizdu, ką reiškia terminas "Gavėjo pavadinimas" \\ \hline
+	Naudotojo valdomas dialogas & Vidutinis & Languose nėra grįžimo atgal mygtukų, vienintelis būdas grįžti yra naudojantis mygtukų juosta. \\ \hline
+	Klaidų prevencija \label{lentele:klaiduPrevencijaJ} &\hyperref[fig:klaiduPrevencijaMygtukai]{Didelis} & Vietinių mokėjimų lange mygtukai "Patvirtinti mokėjimą" ir "Išsaugoti duomenis" nėra atskirti tarpais, bei paspaudus "Patvirtinti mokėjimą" nėra atliekamas papildomas paklausimas ar vartotojas nori atlikti tą mokėjimą, todėl yra galimybė, kad vartotojas norėdamas išsaugoti duomenis prieš savo valią atliks mokėjimo pavedimą\\ \hline
+	& & \\ \hline
 \end{tabular}
 \caption{Justo Tvarijono vertinimas}
 \end{table}
 \end{center}
+
+\begin{figure}[!htb]
+	\includegraphics[scale=0.55]{MokejimoPatvirtinimasKlaiduPrevencija.png}
+  \caption{Mygtukų išdėstymas vietinių mokėjimų lange}
+	\label{fig:klaiduPrevencijaMygtukai}
+\end{figure}
+\hyperref[lentele:klaiduPrevencijaJ]{Defektas} yra didelės reikšmės, kadangi mokėjimo pavedimas yra rimta operacija, todėl klaidingas jos įvygdymas sukeltų reikšmingų nepatogumų sistemos naudotojui. Šią problemą galima spręsti keliais būdais: 1) mygtukus reiktų atitraukti į priešingas puses, kad tarp jų būtų tarpas užtikrinantis didesnį paspaudimų tikslumą. 2) prieš patvirtinant mokėjimą galima parodyti papildomą langą, kuriame vartotojas galėtų patvirtinti, kad nori atlikti šią operaciją.
+
 \subsection{Pažintinė peržvalga}
 \begin{center}
 \begin{table}[h]
