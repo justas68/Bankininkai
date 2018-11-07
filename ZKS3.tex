@@ -67,8 +67,10 @@ Trečiojo laboratorinio darbo reikalavimai.
 \section{Džiugo Mažulio maketo vertinimas}
 \subsection{Euristinis tikrinimas}
 \begin{center}
-	\begin{table}[h]
-\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{8.1cm}|}
+\begin{longtable}[h]{|p{3.5cm}|p{3.5cm}|p{8.1cm}|}
+	\caption{Justo Tvarijono vertinimas}
+	\endfirsthead
+	\endhead
   \hline
 	Euristika & Defekto sunkumas & Komentaras \\ \hline
 	Būsenos matomumas & Vidutinis & Vartotojas savo buvimo vietą mato tik būdamas pirmame hierarchijos sluoksnyje, jam einant į gylesnius sluoksnius, jis gali užmiršti kokioje vietoje yra. \\ \hline
@@ -78,9 +80,7 @@ Trečiojo laboratorinio darbo reikalavimai.
 	Klaidų prevencija & Lengvas & Vietinių mokėjimų lange net neįvedus gavėjo duomenų leidžiama bandyti išsaugoti jo duomenis (tada parodomas klaidos pranešimas, kuriame intuityviai pagal pelės pozicija norisi spausti tą mygtuką, kuris nukelia į pagrindinį langą). Būtų galima išjungti šį mygtuką, kol nėra užpildomi visi privalomi laukai. \\ \hline
 	Naudojimo lankstumas ir našumas & Lengvas & Gavėjo sąrašo negalima išrikiuoti pagal poreikius. Galima patobulinimas: leisti vartotojui išrikiuoti gavėjų ruošinius pagal save, kad dažniausiai naudojami/svarbiausi būtų viršuje. \\ \hline
 	Pagalba ir dokumentacija & Lengvas & Mokėjimo lange būtų gerai matyti informaciją apie laukelį į kurį yra vedama reikšmė(ta informacija turėtų aiškiai paaiškinti, kaip turi atrodyti į konkretų laukelį vedami duomenys), tai sumažėtų klaidų/neteisingai įvestų duomenų tikimybė.  \\ \hline
-\end{tabular}
-\caption{Justo Tvarijono vertinimas}
-\end{table}
+\end{longtable}
 \end{center}
 
 \begin{figure}[!htb]
@@ -91,14 +91,19 @@ Trečiojo laboratorinio darbo reikalavimai.
 \hyperref[lentele:klaiduPrevencijaJ]{Defektas} yra didelės reikšmės, kadangi mokėjimo pavedimas yra rimta operacija, todėl klaidingas jos įvygdymas sukeltų reikšmingų nepatogumų sistemos naudotojui. Šią problemą galima spręsti keliais būdais: 1) mygtukus reiktų atitraukti į priešingas puses, kad tarp jų būtų tarpas užtikrinantis didesnį paspaudimų tikslumą. 2) prieš patvirtinant mokėjimą galima parodyti papildomą langą, kuriame vartotojas galėtų patvirtinti, kad nori atlikti šią operaciją.
 
 \subsection{Pažintinė peržvalga}
+
 \begin{center}
-\begin{table}[h]
-\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\begin{longtable}[h]{|p{5cm}|p{5cm}|p{5cm}|}
+	\caption{Justo Tvarijono vertinimas}
+\endfirsthead
+\endhead
 	\hline
 	Užduoties žingsniai & Ar aiškiai matoma, ką daryti? & Ar suprantamas atsakas? \\ \hline
-\end{tabular}
-\caption{Justo Tvarijono vertinimas}
-\end{table}
+	1. Atsidaryti mokėjimų langą & Taip, meniu juostoje mygtukas pavadinimu "Mokėjimai" vartotojui siejasi su jo siekiamu tikslu & Taip, vartotojas gali matyti ar padarė teisingą žingsnį, kadangi šis paspaudimas priartino jį prie tikslo (vartotojas gavo konkretesnius mokėjimo pasirinkimus) \\ \hline
+	2. Pasirinkti vietiniu mokėjimus & Taip, tarp lange išdėstytų mygtukų nesunku rasti ieškomą(su pavadinimu "vietiniai mokėjimai") & Nevisiškai, vartotojas, kuris dažniau naudojasi sistema supras, kad yra tame lange, kuriame turi būti, tačiau jame niekur neparašyta, kad tai vietinių mokėjimų langas, tai gali suklaidinti kai kuriuos vartotojus. \\ \hline
+	3. Suvesti duomenis & Taip, įvedimo laukai gerai matomi, ant kiekvieno laukelio parašyta, ką jame reikia įvesti(tačiau ant jo paspaudus paaiškinimai digsta) & Ne, sistema niekaip neparodo ar įvesti duomenys yra tinkami. Būtų galima pavaizduoti žalią varnelę prie įvedimo lauko, jeigu duomenys yra validūs. \\ \hline
+	4. Patvirtinti mokėjimą & Taip, ekrano apačioje yra mygtukas, kurio tekstas pakankamai aiškiai nurodo, kad jis skirtas mokėjimo patvirtinimui & Taip, patvirtinus mokėjimą išoką patvirtinimo langas, iš kurio vartotojas sužino, kad jo mokėjimas sėkmingai įgyvendintas. \\ \hline
+\end{longtable}
 \end{center}
 \subsection{Apibendrinimas}
 \section{Justo Tvarijono maketo vertinimas}
