@@ -66,38 +66,22 @@ Banko klientas - turi galimybę atlikti mokėjimus, peržiūrėti sąskaitos iš
 Trečiojo laboratorinio darbo reikalavimai.
 \section{Džiugo Mažulio maketo vertinimas}
 \subsection{Euristinis tikrinimas}
-% nesu tikras ar šitų skyrių prieš lentelę reikia
-\subsubsection{Metodas}
-Euristinis tikrinimas buvo atliktas remiantis dešimt Nielseno patobulintų euristikų sąrašu, bei jų išdėstymų 8 paskaitos skaidrėse.
-\subsubsection{Teigiami įspūdžiai}
-Justo Tvarijono vertinimas
-\begin{itemize}
-	\item Atlikus svarbesnius veiksmus vartotojas yra aiškiai informuojamas apie jų sėkmingą/nesėkmingą atlikimą (Būsenos matomumas).
-	\item Meniu juosta yra pasiekiama viso sistemos naudojimosi metu, taip vartotojui suteikiama galimybė pereiti į kitus langus arba atsijungti neverčiant vartotojo pirma nuvykti į pradinį puslapį (Naudojimo lankstumas ir našumas).
-	\item Tą pačią funkciją(šiuo atveju vietinius pavedimus) galima pasiekti skirtingais būdais reikalaujančiais skirtingo kiekio veiksmų, taip vartotujui suteikiant didesnę pasirinkimo laisvę (Navigacijos šuoliai).
-	\item Beveik visi naudojami terminai yra naudotini realiame pasaulyje, taip vartotojui žymiai patogiau orientuotis sistemoje(Sistemos atitikimas realiam pasauliui).
-	\item Vietinių mokėjimų lange galima rasti ne tik įvedimo laukus, bet ir mokėjimo ruošinių langą, taip išvengiant perteklinių langų naudojimo (Estetika ir minimalizmas).
-	\item Radus klaidas atliekas svarbesnius veiksmus vartotojui aiškiai paaiškinimas, kur ir kodėl įvyko klaida (Klaidų atpažinimo rėmimas).
-\end{itemize}
-\subsubsection{Defektų sąrašas}
 \begin{center}
-\begin{longtable}[!htb]{|p{3.5cm}|p{3.5cm}|p{8.1cm}|}
+\begin{longtable}[!htb]{|p{3.5cm}|p{1.9cm}|p{9.6cm}|}
 	\caption{Justo Tvarijono vertinimas}
 	\endfirsthead
 	\endhead
   \hline
 	Euristika & Defekto sunkumas & Komentaras \\ \hline
-	Būsenos matomumas & Vidutinis & Vartotojas savo buvimo vietą mato tik būdamas pirmame hierarchijos sluoksnyje, jam einant į gylesnius sluoksnius, jis gali užmiršti kokioje vietoje yra. \\ \hline
-	Sistemos atitikimas realiam pasauliui & Lengvas & Vietinių mokėjimų lange vartotojui gali būti ne akivaizdu, ką reiškia terminas "Gavėjo pavadinimas" \\ \hline
-	Naudotojo valdomas dialogas & Vidutinis & Languose nėra grįžimo atgal mygtukų, vienintelis būdas grįžti yra naudojantis mygtukų juosta. \\ \hline
-	Klaidų prevencija \label{lentele:klaiduPrevencijaJ} &\hyperref[fig:klaiduPrevencijaMygtukai]{Didelis} & Vietinių mokėjimų lange mygtukai "Patvirtinti mokėjimą" ir "Išsaugoti duomenis" nėra atskirti tarpais, bei paspaudus "Patvirtinti mokėjimą" nėra atliekamas papildomas paklausimas ar vartotojas nori atlikti tą mokėjimą, todėl yra galimybė, kad vartotojas norėdamas išsaugoti duomenis prieš savo valią atliks mokėjimo pavedimą\\ \hline
-	Klaidų prevencija & Lengvas & Vietinių mokėjimų lange net neįvedus gavėjo duomenų leidžiama bandyti išsaugoti jo duomenis (tada parodomas klaidos pranešimas, kuriame intuityviai pagal pelės pozicija norisi spausti tą mygtuką, kuris nukelia į pagrindinį langą). Būtų galima išjungti šį mygtuką, kol nėra užpildomi visi privalomi laukai. \\ \hline
-	Naudojimo lankstumas ir našumas & Lengvas & Gavėjo sąrašo negalima išrikiuoti pagal poreikius. Galima patobulinimas: leisti vartotojui išrikiuoti gavėjų ruošinius pagal save, kad dažniausiai naudojami/svarbiausi būtų viršuje. \\ \hline
-	Pagalba ir dokumentacija & Lengvas & Mokėjimo lange būtų gerai matyti informaciją apie laukelį į kurį yra vedama reikšmė(ta informacija turėtų aiškiai paaiškinti, kaip turi atrodyti į konkretų laukelį vedami duomenys), tai sumažėtų klaidų/neteisingai įvestų duomenų tikimybė.  \\ \hline
+	Būsenos matomumas & 2 & Vartotojas savo buvimo vietą mato tik būdamas pirmame hierarchijos sluoksnyje, jam einant į gylesnius sluoksnius, jis gali užmiršti kokioje vietoje yra. \\ \hline
+	Sistemos atitikimas realiam pasauliui & 1 & Vietinių mokėjimų lange vartotojui gali būti ne akivaizdu, ką reiškia terminas "Gavėjo pavadinimas" \\ \hline
+	Naudotojo valdomas dialogas & 2 & Languose nėra grįžimo atgal mygtukų, vienintelis būdas grįžti yra naudojantis mygtukų juosta. \\ \hline
+	Klaidų prevencija \label{lentele:klaiduPrevencijaJ} & \hyperref[fig:klaiduPrevencijaMygtukai]{4} & Vietinių mokėjimų lange mygtukai "Patvirtinti mokėjimą" ir "Išsaugoti duomenis" nėra atskirti tarpais, bei paspaudus "Patvirtinti mokėjimą" nėra atliekamas papildomas paklausimas ar vartotojas nori atlikti tą mokėjimą, todėl yra galimybė, kad vartotojas norėdamas išsaugoti duomenis prieš savo valią atliks mokėjimo pavedimą\\ \hline
+	Klaidų prevencija & 1 & Vietinių mokėjimų lange net neįvedus gavėjo duomenų leidžiama bandyti išsaugoti jo duomenis (tada parodomas klaidos pranešimas, kuriame intuityviai pagal pelės pozicija norisi spausti tą mygtuką, kuris nukelia į pagrindinį langą). Būtų galima išjungti šį mygtuką, kol nėra užpildomi visi privalomi laukai. \\ \hline
+	Naudojimo lankstumas ir našumas & 1 & Gavėjo sąrašo negalima išrikiuoti pagal poreikius. Galima patobulinimas: leisti vartotojui išrikiuoti gavėjų ruošinius pagal save, kad dažniausiai naudojami/svarbiausi būtų viršuje. \\ \hline
+	Pagalba ir dokumentacija & 1 & Mokėjimo lange būtų gerai matyti informaciją apie laukelį į kurį yra vedama reikšmė(ta informacija turėtų aiškiai paaiškinti, kaip turi atrodyti į konkretų laukelį vedami duomenys), tai sumažėtų klaidų/neteisingai įvestų duomenų tikimybė.  \\ \hline
 \end{longtable}
 \end{center}
-
-\subsubsection{Priedai}
 \begin{figure}[H]
 	\includegraphics[scale=0.55]{MokejimoPatvirtinimasKlaiduPrevencija.png}
   \caption{Mygtukų išdėstymas vietinių mokėjimų lange}
