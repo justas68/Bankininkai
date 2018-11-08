@@ -75,7 +75,7 @@ Trečiojo laboratorinio darbo reikalavimai.
 	Euristika & Defekto sunkumas & Komentaras \\ \hline
 	Būsenos matomumas & 2 & Vartotojas savo buvimo vietą mato tik būdamas pirmame hierarchijos sluoksnyje, jam einant į gylesnius sluoksnius, niekur lange nėra užrašomas esamo lango pavadinimas, nerodomas nukeliautas kelias. \\ \hline
 	Sistemos atitikimas realiam pasauliui & 1 & Vietinių mokėjimų lange vartotojui gali būti ne akivaizdu, ką reiškia terminas "Gavėjo pavadinimas" \\ \hline
-	Naudotojo valdomas dialogas & 2 & Languose nėra grįžimo atgal mygtukų, vienintelis būdas grįžti yra naudojantis mygtukų juosta. \\ \hline
+	Naudotojo valdomas dialogas & 1 & Languose nėra grįžimo atgal mygtukų, vienintelis būdas grįžti yra naudojantis mygtukų juosta. \\ \hline
 	Darna ir standartai & 0 & - \\ \hline
 	Klaidų prevencija \label{lentele:klaiduPrevencijaJ} & \hyperref[fig:klaiduPrevencijaMygtukai]{4} & 1. Vietinių mokėjimų lange mygtukai "Patvirtinti mokėjimą" ir "Išsaugoti duomenis" nėra atskirti tarpais, bei paspaudus "Patvirtinti mokėjimą" nėra atliekamas papildomas paklausimas ar vartotojas nori atlikti tą mokėjimą, todėl yra galimybė, kad vartotojas norėdamas išsaugoti duomenis prieš savo valią atliks mokėjimo pavedimą. 2. Vietinių mokėjimų lange net neįvedus gavėjo duomenų leidžiama bandyti išsaugoti jo duomenis (tada parodomas klaidos pranešimas, kuriame intuityviai pagal pelės pozicija norisi spausti tą mygtuką, kuris nukelia į pagrindinį langą). Būtų galima išjungti šį mygtuką, kol nėra užpildomi visi privalomi laukai. \\ \hline
 	Atpažinimas geriau nei atsiminimas & 0 & - \\ \hline
@@ -109,7 +109,7 @@ Trečiojo laboratorinio darbo reikalavimai.
 \end{center}
 \subsection{Apibendrinimas}
 % Niekaip neišsiaiškinau ar apibendrinimai turi būt kiekvieno vertintojo atskirai, ar abiejų kartu.
-Šio maketo dizainas nenaudoja perteklinių langų, taupiai išnaudioja lango vietą, taip paspartindamas navigaciją. Maketas laikosi darnos, mygtukų išdėstymas bei terminai sutampa visame makete, tačiau yra trūkumų su būsenos matomumu bei klaidų prevencijomis, ko pasekoje išlieka vartotojo pasiklydimo tinklalapyje tikimybė, bei nenorimo veiksmo alikimas. Tačiau pašalinus pagrindinius trūkumus šis maketas(ar tam tikri jo dizaino elementai) gali būti naudojamas.
+Šio maketo dizainas nenaudoja perteklinių langų, taupiai išnaudoja lango vietą, taip paspartindamas navigaciją. Maketas laikosi darnos, mygtukų išdėstymas bei terminai sutampa visame makete, tačiau yra trūkumų su būsenos matomumu bei klaidų prevencijomis, ko pasekoje išlieka vartotojo pasiklydimo tinklalapyje tikimybė, bei nenorimo veiksmo alikimas. Tačiau pašalinus pagrindinius trūkumus šis maketas(ar tam tikri jo dizaino elementai) gali būti naudojamas.
 
 \section{Justo Tvarijono maketo vertinimas}
 \subsection{Euristinis tikrinimas}
@@ -117,8 +117,49 @@ Trečiojo laboratorinio darbo reikalavimai.
 \subsection{Apibendrinimas}
 \section{Michal Stankevič maketo vertinimas}
 \subsection{Euristinis tikrinimas}
+\begin{center}
+\begin{longtable}[!htb]{|p{3.5cm}|p{1.9cm}|p{9.6cm}|}
+	\caption{Justo Tvarijono vertinimas}
+	\endfirsthead
+	\endhead
+  \hline
+	Euristika & Defekto sunkumas & Komentaras \\ \hline
+	Būsenos matomumas & 0 & - \\ \hline
+	Sistemos atitikimas realiam pasauliui & 0 & - \\ \hline
+	Naudotojo valdomas dialogas & 0 & - \\ \hline
+	Darna ir standartai & 0 & - \\ \hline
+	Klaidų prevencija \label{lentele:klaiduPrevencijaM} & \hyperref[fig:klaiduPrevencijaMygtukai2]{4} & 1. Vietinių mokėjimų lange mygtukai "Mokėti" ir "Atidėti" atskirti labai mažu tarpu, bei paspaudus "Mokėti" nėra atliekamas papildomas paklausimas ar vartotojas nori atlikti tą mokėjimą, todėl yra galimybė, kad vartotojas norėdamas atidėti mokėjimą prieš savo valią atliks mokėjimo pavedimą. \\ \hline
+	Atpažinimas geriau nei atsiminimas & 0 & - \\ \hline
+	Naudojimo lankstumas ir našumas & 0 & - \\ \hline
+	Estetiškas ir minimalistiniz dizainas & 1 & Swedbank mygtukas pradiniame lange nėra reikalingas, kadangi jis neatlieka jokio funkcionalumo ir nesuteikia jokios reikalingos informacijos. Grįžimo mygtukas yra pačioje lango apačioje, jį gali uždengti puslapio klostės. \\ \hline
+	Remti klaidų atpažinimą, jų priežasčių nustatymą ir taisymą & 0 & - \\ \hline
+	Pagalba ir dokumentacija & 1 & Mokėjimo lange būtų gerai matyti informaciją apie laukelį į kurį yra vedama reikšmė(ta informacija turėtų aiškiai paaiškinti, kaip turi atrodyti į konkretų laukelį vedami duomenys). \\ \hline
+\end{longtable}
+\end{center}
+\begin{figure}[H]
+	\includegraphics[scale=0.55]{MokejimoPatvirtinimasKlaiduPrevencija2.png}
+  \caption{Mygtukų išdėstymas vietinių mokėjimų lange}
+	\label{fig:klaiduPrevencijaMygtukai2}
+\end{figure}
+\hyperref[lentele:klaiduPrevencijaM]{Defektas} yra didelės reikšmės, kadangi mokėjimo pavedimas yra rimta operacija, todėl klaidingas jos įvygdymas sukeltų reikšmingų nepatogumų sistemos naudotojui. Šią problemą būtų galima spręsti prieš mokėjimo įvygdymą pateikiant papildomą patvirtinimo langą.
 \subsection{Pažintinė peržvalga}
+
+\begin{center}
+\begin{longtable}[!htb]{|p{5cm}|p{5cm}|p{5cm}|}
+	\caption{Justo Tvarijono vertinimas. Mokėjimo pavedimo atlikimas}
+\endfirsthead
+\endhead
+	\hline
+	Užduoties žingsniai & Ar aiškiai matoma, ką daryti? & Ar suprantamas atsakas? \\ \hline
+	1. Atsidaryti mokėjimų langą & Taip, meniu septinkampyje yra mygtukas pavadinimu "Mokėjimai".  & Taip, naujai atsidarame lange vartotojas mato, kad jo pavadinimas yra "Mokėjimai"  \\ \hline
+	2. Pasirinkti vietinius mokėjimus & Taip, tarp lange išdėstytų mygtukų nesunku rasti ieškomą(su pavadinimu "Vietiniai") & Taip, pagal duonos trupinių šablono teikiamą informaciją vartotojas, gali matyti, kad atsidūrė vietinių mokėjimų lange. \\ \hline
+	3. Suvesti duomenis & Taip, įvedimo laukai gerai matomi, šalia kiekvieno įvedimo lauko parašyta, kokia informacija jame turi būti įvesta & Taip, įvedus visus duomenis atsiranda papildomi mygtukai, kurie leidžia toliau testi užduotį \\ \hline
+	4. Patvirtinti mokėjimą & Taip, suvedus duomenis ekrano apačioje atsiradęs mygtukas "Mokėti" sufleruoja apie mokėjimo patvirtinimą & Taip, patvirtinus atsidaro naujas langas, kuriame pranešama apie sėkmingą mokėjimą \\ \hline
+\end{longtable}
+\end{center}
 \subsection{Apibendrinimas}
+% Niekaip neišsiaiškinau ar apibendrinimai turi būt kiekvieno vertintojo atskirai, ar abiejų kartu.
+Šis maketas yra minimalistinis, ko pasekoje neturi didelio kiekio defektų euristiniame patikrinime. Maketas inovatyvus pakankamai paprastas naudoti, tačiau jame trūksta pagalbos ir dokumentacijos naujiems vartotojams, o patyruniems vartotojams jis gali pasirodyti per daug paprastas.
 \section{Išvados}
 \section{Priedai}
 	\begin{itemize}
