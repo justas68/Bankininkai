@@ -7,7 +7,7 @@
 \usepackage{amsmath}
 \usepackage{bm}
 \usepackage{caption}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{color}
 \usepackage{float}
 \usepackage{graphicx}
@@ -37,7 +37,7 @@
 \thirdauthor{Michal Stankevič}   
 \supervisor{Kristina Lapin, Doc., Dr.}
 \date{Vilnius – \the\year}
-
+\bibliography{bibliografija}
 \begin{document}
 \maketitle
 \sectionnonum{Anotacija}
@@ -64,6 +64,9 @@ Vartotojo grafinės sąsajos išmokstamumo gerinimas, pagrindinėms funkcijoms p
 Banko klientas - turi galimybę atlikti mokėjimus, peržiūrėti sąskaitos išrašus, kurti mokėjimo ruošinius, ieškoti reikalingos informacijos.
 \subsectionnonum{Darbo pagrindas}
 Trečiojo laboratorinio darbo reikalavimai.
+\subsectionnonum{Naudoti dokumentai}
+\cite{8_Euristinis_tikrinimas.pdf},
+\cite{9_Tikrinimų_organizavimas.pdf}
 \section{Džiugo Mažulio maketo vertinimas}
 \subsection{Euristinis tikrinimas}
 \begin{center}
@@ -148,6 +151,7 @@ Trečiojo laboratorinio darbo reikalavimai.
 	4. Atidaryti paieškos rezultatą & Taip, pabraukta mėlynos spalvos rezultato antraštė indikuoja, jog pastarosios paspaudimu vartotojas bus nukreiptas į atitinkamo rezultato langą. & Taip, sistema vaizduoja pasirinką rezultatą su visu jam priklausančiu turiniu. \\ \hline
 \end{longtable}
 \end{center}
+\subsection{Apibendrinimas}
 
 \section{Michal Stankevič maketo vertinimas}
 \subsection{Euristinis tikrinimas}
@@ -229,7 +233,7 @@ Trečiojo laboratorinio darbo reikalavimai.
 \end{center}
 \subsection{Apibendrinimas}
 % Niekaip neišsiaiškinau ar apibendrinimai turi būt kiekvieno vertintojo atskirai, ar abiejų kartu.
-Šis maketas yra minimalistinis, ko pasekoje neturi didelio kiekio defektų euristiniame patikrinime. Maketas inovatyvus pakankamai paprastas naudoti, tačiau jame trūksta pagalbos ir dokumentacijos naujiems vartotojams, o patyruniems vartotojams jis gali pasirodyti per daug paprastas.
+Šis maketas yra minimalistinis, ko pasekoje neturi didelio kiekio defektų euristiniame patikrinime. Maketas inovatyvus pakankamai paprastas naudoti, tačiau jame trūksta pagalbos ir dokumentacijos naujiems vartotojams, o patyruniems vartotojams jis gali pasirodyti per daug paprastas. Jis gali būti ne toks patogus vyresnio amžiaus žmonėms dėl to, kad tarpusavyje sujunti meniu mygtukai sukelia klaidos tikimybę netikslių paspaudimų atveju. Šis modelis galbūt per daug minimalistinis, kad jį visą būtų galima naudoti detaliojo prototipo kūrime, tačiau kai kuriuos akcentus yra galimybė panaudoti.
 \section{Išvados}
 Detaliojo prototipo pagrindu pasirinkome Justo Tvarijono maketą patrauklesnės informacijos architektūros bei vertikaliojo meniu. Mažėsnių hierachijos langų struktūrą importuosime iš Džiugo Mažulio maketo dėl patrauklesnio dydžio, išdėstymo. 
 \section{Priedai}
