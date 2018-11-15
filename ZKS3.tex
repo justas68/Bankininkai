@@ -79,11 +79,8 @@ Trečiojo laboratorinio darbo reikalavimai.
 	Būsenos matomumas & 2 & Vartotojas savo buvimo vietą mato tik būdamas pirmame hierarchijos sluoksnyje, jam einant į gylesnius sluoksnius, niekur lange nėra užrašomas esamo lango pavadinimas, nerodomas nukeliautas kelias. \\ \hline
 	Sistemos atitikimas realiam pasauliui & 1 & Vietinių mokėjimų lange vartotojui gali būti ne akivaizdu, ką reiškia terminas "Gavėjo pavadinimas" \\ \hline
 	Naudotojo valdomas dialogas & 1 & Languose nėra grįžimo atgal mygtukų, vienintelis būdas grįžti yra naudojantis mygtukų juosta. \\ \hline
-	Darna ir standartai & 0 & - \\ \hline
 	Klaidų prevencija \label{lentele:klaiduPrevencijaJ} & \hyperref[fig:klaiduPrevencijaMygtukai]{4} & 1. Vietinių mokėjimų lange mygtukai "Patvirtinti mokėjimą" ir "Išsaugoti duomenis" nėra atskirti tarpais, bei paspaudus "Patvirtinti mokėjimą" nėra atliekamas papildomas paklausimas ar vartotojas nori atlikti tą mokėjimą, todėl yra galimybė, kad vartotojas norėdamas išsaugoti duomenis prieš savo valią atliks mokėjimo pavedimą. 2. Vietinių mokėjimų lange net neįvedus gavėjo duomenų leidžiama bandyti išsaugoti jo duomenis (tada parodomas klaidos pranešimas, kuriame intuityviai pagal pelės pozicija norisi spausti tą mygtuką, kuris nukelia į pagrindinį langą). Būtų galima išjungti šį mygtuką, kol nėra užpildomi visi privalomi laukai. \\ \hline
-	Atpažinimas geriau nei atsiminimas & 0 & - \\ \hline
 	Naudojimo lankstumas ir našumas & 1 & Gavėjo sąrašo negalima išrikiuoti pagal poreikius. Galima patobulinimas: leisti vartotojui išrikiuoti gavėjų ruošinius pagal save, kad dažniausiai naudojami/svarbiausi būtų viršuje. \\ \hline
-	Estetiškas ir minimalistiniz dizainas & 0 & - \\ \hline
 	Remti klaidų atpažinimą, jų priežasčių nustatymą ir taisymą & 1 & Klaidos pranešimuosi vartojamas abstrakčios frazės. \\ \hline
 	Pagalba ir dokumentacija & 1 & Mokėjimo lange būtų gerai matyti informaciją apie laukelį į kurį yra vedama reikšmė(ta informacija turėtų aiškiai paaiškinti, kaip turi atrodyti į konkretų laukelį vedami duomenys), tai sumažėtų klaidų/neteisingai įvestų duomenų tikimybė.  \\ \hline
 \end{longtable}
@@ -94,6 +91,20 @@ Trečiojo laboratorinio darbo reikalavimai.
 	\label{fig:klaiduPrevencijaMygtukai}
 \end{figure}
 \hyperref[lentele:klaiduPrevencijaJ]{Defektas} yra didelės reikšmės, kadangi mokėjimo pavedimas yra rimta operacija, todėl klaidingas jos įvygdymas sukeltų reikšmingų nepatogumų sistemos naudotojui. Šią problemą galima spręsti keliais būdais: 1) mygtukus reiktų atitraukti į priešingas puses, kad tarp jų būtų tarpas užtikrinantis didesnį paspaudimų tikslumą. 2) prieš patvirtinant mokėjimą galima parodyti papildomą langą, kuriame vartotojas galėtų patvirtinti, kad nori atlikti šią operaciją.
+\begin{center}
+	\begin{longtable}[!htb]{|p{3.5cm}|p{1.9cm}|p{9.6cm}|}
+	\caption{Michal Stankevič vertinimas}
+	\endfirsthead
+    \endhead
+  \hline
+    Euristika & Defekto sunkumas & Komentaras \\ \hline
+    Sistemos atitikimas realiam pasauliui & 1 & ,,Mokėjimai" lange nėra vienareikšmiškai apibrėžta, kuo skiriasi mokėjimų tipai ("Mano", "Ruošiniai", "Ankstesni").\\ \hline
+    Darna ir standartai & 1 & Pasirinkimo meniu mygtukų stiliai nedarnūs. Pagrindiniame lange "Siųsti pinigus" ir "Gauti pinigus" mygtukai suapvalintais kampais, o lange "Mokėjimai" mygtukai yra be suapvalintų kampų. \\ \hline
+    Klaidų prevencija & 1 & Paieškos lange būtų gerai siūlyti rekomenduojamus pasirinkimus. \\ \hline
+    Atpažinimas geriau nei atsiminimas & 1 & Tobulintinas aspektas - siūlyti pagalbą (pagalbinę informaciją) pavyzdžiui pasirenkant gavėjo tipą (Ruošiniai, Mano ir tt.).\\ \hline
+    Estetiškas ir minimalistinis dizainas & 1 & Per daug informacijos Klaidos pranešime. Alternatyva - galėtų būti pasirinkimai išsamesni. \\ \hline
+	\end{longtable}
+\end{center}
 
 \subsection{Pažintinė peržvalga}
 
@@ -105,9 +116,19 @@ Trečiojo laboratorinio darbo reikalavimai.
 	\hline
 	Užduoties žingsniai & Ar aiškiai matoma, ką daryti? & Ar suprantamas atsakas? \\ \hline
 	1. Atsidaryti mokėjimų langą & Taip, meniu juostoje mygtukas pavadinimu "Mokėjimai" vartotojui siejasi su jo siekiamu tikslu & Taip, vartotojas gali matyti ar padarė teisingą žingsnį, kadangi šis paspaudimas priartino jį prie tikslo (vartotojas gavo konkretesnius mokėjimo pasirinkimus), bei paspaustas mygtukas pakeitė spalvą. \\ \hline
-	2. Pasirinkti vietinius mokėjimus & Taip, tarp lange išdėstytų mygtukų nesunku rasti ieškomą(su pavadinimu "vietiniai mokėjimai") & Nevisiškai, vartotojas, kuris dažniau naudojasi sistema supras, kad yra tame lange, kuriame turi būti, tačiau jame niekur neparašyta, kad tai vietinių mokėjimų langas, tai gali suklaidinti kai kuriuos vartotojus. \\ \hline
+	2. Pasirinkti vietinius mokėjimus & Taip, tarp lange išdėstytų mygtukų nesunku rasti ieškomą(su pavadinimu "vietiniai mokėjimai") & Ne, vartotojas, kuris dažniau naudojasi sistema supras, kad yra tame lange, kuriame turi būti, tačiau jame niekur neparašyta, kad tai vietinių mokėjimų langas, tai gali suklaidinti kai kuriuos vartotojus. \\ \hline
 	3. Suvesti duomenis & Taip, įvedimo laukai gerai matomi, ant kiekvieno laukelio parašyta, ką jame reikia įvesti(tačiau ant jo paspaudus paaiškinimai digsta) & Ne, sistema niekaip neparodo ar įvesti duomenys yra tinkami. Būtų galima pavaizduoti žalią varnelę prie įvedimo lauko, jeigu duomenys yra validūs. \\ \hline
 	4. Patvirtinti mokėjimą & Taip, ekrano apačioje yra mygtukas, kurio tekstas pakankamai aiškiai nurodo, kad jis skirtas mokėjimo patvirtinimui & Taip, patvirtinus mokėjimą išoką patvirtinimo langas, iš kurio vartotojas sužino, kad jo mokėjimas sėkmingai įgyvendintas. \\ \hline
+\end{longtable}
+\begin{longtable}[!htb]{|p{5cm}|p{5cm}|p{5cm}|}
+	\caption{Michal Stankevič vertinimas. Paieška.}
+\endfirsthead
+\endhead
+	\hline
+	Užduoties žingsniai & Ar aiškiai matoma, ką daryti? & Ar suprantamas atsakas? \\ \hline
+	1. Paspausti mygtuką ,,Paieška" & Taip, meniu juostoje mygtukas pavadinimu "Paieška" apibrėžia funkciją. & Taip, vartotojui pateikiamas laukas, kuriame galima įvesti paieškos frazę. \\ \hline
+	2. Išskleisti rezultatus & Atrodo makete praleistas žingsnis, nes nebuvo frazės įvedimo žingsnio, o jau pateikiami rezultatai. & Ne, nes nežinia iš kur atsirado rezultatai.\\ \hline
+	3. Bandyti rikiuoti rezultatus. & Nėra užtikrintumo jausmo, bet atrodo, kad užtektų nuimti varneles nuo laukų, apibrėžiančių kriterijus, kuriuos norime išmesti iš rezultatų. & Ne, nes makete nėra apibrėžta, kas įvyks toliau. \\ \hline
 \end{longtable}
 \end{center}
 \subsection{Apibendrinimas}
@@ -134,6 +155,19 @@ Trečiojo laboratorinio darbo reikalavimai.
 	Remti klaidų atpažinimą, jų priežasčių nustatymą ir taisymą & 0 & - \\ \hline
 	Pagalba ir dokumentacija & 0 & -  \\ \hline
 \end{longtable}
+
+\begin{longtable}[!htb]{|p{3.5cm}|p{1.9cm}|p{9.6cm}|}
+	\caption{Michal Stankevič vertinimas}
+	\endfirsthead
+	\endhead
+  \hline
+	Euristika & Defekto sunkumas & Komentaras \\ \hline
+	Sistemos atitikimas realiam pasauliui & 1 & 3 puslapyje neintuityvūs terminai: ,,vidinė" ir ,,išorinė" informacija. \\ \hline
+	Darna ir standartai & 2 & 3 (paieškos rezultatų) puslapyje nėra akivaizdaus pasirinkimo norint patekti į pagrindinį langą. Tas pats 8 puslapyje. Pasiūlymas: kiekviename puslapyje vertėtų įdėti arba mygtuką ,,Grįžti į pagrindinį langą" arba naudoti ,,Duonos nuotrupų" elementą, leisiantį vartotojui susiorientuoti. \par
+	Pagrindiniame lange dizainas nenuoseklus - skiltis ,,Sąskaitos" gali būti paslėpta, o ,,Naujienos" skiltis - neslepiama ir užgožia pusę puslapio. \\ \hline
+	Klaidų prevencija & 2 & 8 puslapyje keistai išdėstyta informacija, susijusi su Smart-ID - nėra patogu vartotojui spausti pagalbos mygtuką (klaustuką), kuris yra toli nuo ,,Patvirtinti su Smart-ID" mygtuko. Siūlymas: pagalbos mygtuką patalpinti arčiau mygtuko ,,Patvirtinti su Smart-ID". Tame pačiame puslapyje - neaišku, kaip atšaukti mokėjimą be išsaugojimo.\\ \hline
+	Estetiškas ir minimalistinis dizainas & 2 & 9 puslapyje informaciniame lange informacijos yra daug, rekomenduotina sutrumpinti žinutę. 3 puslapyje paieškos laukas pernelyg atitolęs nuo viršutinės kraštinės. \\ \hline
+\end{longtable}
 \end{center}
 
 \subsection{Pažintinė peržvalga}
@@ -151,6 +185,20 @@ Trečiojo laboratorinio darbo reikalavimai.
 	4. Atidaryti paieškos rezultatą & Taip, pabraukta mėlynos spalvos rezultato antraštė indikuoja, jog pastarosios paspaudimu vartotojas bus nukreiptas į atitinkamo rezultato langą. & Taip, sistema vaizduoja pasirinką rezultatą su visu jam priklausančiu turiniu. \\ \hline
 \end{longtable}
 \end{center}
+\begin{center}
+	\begin{longtable}[!htb]{|p{5cm}|p{5cm}|p{5cm}|}
+		\caption{Michal Stankevič vertinimas. Atlikti mokėjimą.}
+	\endfirsthead
+	\endhead
+		\hline
+		Užduoties žingsniai & Ar aiškiai matoma, ką daryti? & Ar suprantamas atsakas? \\ \hline
+		1. Įvesti pinigų sumą į langelį ir paspausti mygtuką ,,Siųsti pinigus" & Taip, akivaizdu, kad metafora atitinka veiksmą - mygtuko pavadinimas sutampa su funkcijos pavadinimu. & Taip, užpildoma dalis duomenų, susijusių su pervedimu.   \\ \hline
+		2. Įvesti duomenis į laukus. & Taip, bet siūlytina paryškinti privalomus laukus. & Taip, nes niekas nevyksta. \\ \hline
+		3. Spausti mygtuką ,,Toliau" & Taip, akivaizdi metafora. & Taip, sistema pavaizduoja užpildytus duomenis. \\ \hline
+		4. Spausti ,,Patvirtinti su Smart-ID" & Ne visai. Iš vienos pusės, yra tik du pasirinkimai, vartotojas nesirinks ,,Pakeisti mokėjimą", todėl lieka apmokėjimas su Smart-ID, bet vartotojas nėra užtikrintas, kaip procedūra vyksta, nes Smart-ID yra finansų technologijų naujovė. & Taip, pateikiamas autorizavimo kodą turintis langas su instrukcijomis. \\ \hline
+		5. Įvykdyti autorizavimą telefone (makete nematome). & Taip, nurodyta instrukcijose. & Taip, sistema informuoja apie sėkmingą transakciją. \\ \hline
+	\end{longtable}
+	\end{center}
 \subsection{Apibendrinimas}
 
 \section{Michal Stankevič maketo vertinimas}
@@ -174,7 +222,24 @@ Trečiojo laboratorinio darbo reikalavimai.
 	Pagalba ir dokumentacija & 0 & Sistema turi sufleruoti vartotojui, jog tam tikruose languose siekdamas grįžti atgal jis turi paspausti ant tuščios vietos. \\ \hline
 \end{longtable}
 \end{center}
-
+\begin{center}
+\begin{longtable}[!htb]{|p{3.5cm}|p{1.9cm}|p{9.6cm}|}
+	\caption{Justo Tvarijono vertinimas}
+	\endfirsthead
+	\endhead
+    \hline
+	Euristika & Defekto sunkumas & Komentaras \\ \hline
+	Klaidų prevencija \label{lentele:klaiduPrevencijaM} & \hyperref[fig:klaiduPrevencijaMygtukai2]{4} & 1. Vietinių mokėjimų lange mygtukai "Mokėti" ir "Atidėti" atskirti labai mažu tarpu, bei paspaudus "Mokėti" nėra atliekamas papildomas paklausimas ar vartotojas nori atlikti tą mokėjimą, todėl yra galimybė, kad vartotojas norėdamas atidėti mokėjimą prieš savo valią atliks mokėjimo pavedimą. \\ \hline
+	Estetiškas ir minimalistiniz dizainas & 1 & Swedbank mygtukas pradiniame lange nėra reikalingas, kadangi jis neatlieka jokio funkcionalumo ir nesuteikia jokios reikalingos informacijos. Grįžimo mygtukas yra pačioje lango apačioje, jį gali uždengti puslapio klostės. \\ \hline
+	Pagalba ir dokumentacija & 1 & Mokėjimo lange būtų gerai matyti informaciją apie laukelį į kurį yra vedama reikšmė(ta informacija turėtų aiškiai paaiškinti, kaip turi atrodyti į konkretų laukelį vedami duomenys). \\ \hline
+\end{longtable}
+\end{center}
+\begin{figure}[H]
+	\includegraphics[scale=0.55]{MokejimoPatvirtinimasKlaiduPrevencija2.png}
+    \caption{Mygtukų išdėstymas vietinių mokėjimų lange}
+	\label{fig:klaiduPrevencijaMygtukai2}
+\end{figure}
+\hyperref[lentele:klaiduPrevencijaM]{Defektas} yra didelės reikšmės, kadangi mokėjimo pavedimas yra rimta operacija, todėl klaidingas jos įvygdymas sukeltų reikšmingų nepatogumų sistemos naudotojui. Šią problemą būtų galima spręsti prieš mokėjimo įvygdymą pateikiant papildomą patvirtinimo langą.
 \subsection{Pažintinė peržvalga}
 
 \begin{center}
@@ -190,34 +255,6 @@ Trečiojo laboratorinio darbo reikalavimai.
 	4. Atidaryti paieškos rezultatą & Ne, rezultatų antraštės išsiskiria tik šrifto dydžiu. Vartotojui kyla dvejonių kur derėtų spausti siekiant pasirinkti pageidaujamą paieškos rezultatą. & Ne, paieškos rezultato atidarymas makete neįgyvendintas. \\ \hline
 \end{longtable}
 \end{center}
-\subsection{Euristinis tikrinimas}
-\begin{center}
-\begin{longtable}[!htb]{|p{3.5cm}|p{1.9cm}|p{9.6cm}|}
-	\caption{Justo Tvarijono vertinimas}
-	\endfirsthead
-	\endhead
-  \hline
-	Euristika & Defekto sunkumas & Komentaras \\ \hline
-	Būsenos matomumas & 0 & - \\ \hline
-	Sistemos atitikimas realiam pasauliui & 0 & - \\ \hline
-	Naudotojo valdomas dialogas & 0 & - \\ \hline
-	Darna ir standartai & 0 & - \\ \hline
-	Klaidų prevencija \label{lentele:klaiduPrevencijaM} & \hyperref[fig:klaiduPrevencijaMygtukai2]{4} & 1. Vietinių mokėjimų lange mygtukai "Mokėti" ir "Atidėti" atskirti labai mažu tarpu, bei paspaudus "Mokėti" nėra atliekamas papildomas paklausimas ar vartotojas nori atlikti tą mokėjimą, todėl yra galimybė, kad vartotojas norėdamas atidėti mokėjimą prieš savo valią atliks mokėjimo pavedimą. \\ \hline
-	Atpažinimas geriau nei atsiminimas & 0 & - \\ \hline
-	Naudojimo lankstumas ir našumas & 0 & - \\ \hline
-	Estetiškas ir minimalistiniz dizainas & 1 & Swedbank mygtukas pradiniame lange nėra reikalingas, kadangi jis neatlieka jokio funkcionalumo ir nesuteikia jokios reikalingos informacijos. Grįžimo mygtukas yra pačioje lango apačioje, jį gali uždengti puslapio klostės. \\ \hline
-	Remti klaidų atpažinimą, jų priežasčių nustatymą ir taisymą & 0 & - \\ \hline
-	Pagalba ir dokumentacija & 1 & Mokėjimo lange būtų gerai matyti informaciją apie laukelį į kurį yra vedama reikšmė(ta informacija turėtų aiškiai paaiškinti, kaip turi atrodyti į konkretų laukelį vedami duomenys). \\ \hline
-\end{longtable}
-\end{center}
-\begin{figure}[H]
-	\includegraphics[scale=0.55]{MokejimoPatvirtinimasKlaiduPrevencija2.png}
-  \caption{Mygtukų išdėstymas vietinių mokėjimų lange}
-	\label{fig:klaiduPrevencijaMygtukai2}
-\end{figure}
-\hyperref[lentele:klaiduPrevencijaM]{Defektas} yra didelės reikšmės, kadangi mokėjimo pavedimas yra rimta operacija, todėl klaidingas jos įvygdymas sukeltų reikšmingų nepatogumų sistemos naudotojui. Šią problemą būtų galima spręsti prieš mokėjimo įvygdymą pateikiant papildomą patvirtinimo langą.
-\subsection{Pažintinė peržvalga}
-
 \begin{center}
 \begin{longtable}[!htb]{|p{5cm}|p{5cm}|p{5cm}|}
 	\caption{Justo Tvarijono vertinimas. Mokėjimo pavedimo atlikimas}
