@@ -241,6 +241,25 @@ Užduoties Nr.&Komentarai\\ \hline
 	\end{tabular}
 \end{center}
 \subsection{Apibendrinimas}
+\begin{center}
+	\begin{tabular}{ |p{1.6cm}| p{2cm} |p{3cm}|p{3cm}|p{3cm}| p{2.4cm} |}
+\hline
+Užduoties Nr.&Sėkmingai įvykdė&Vykdymo laiko vidurkis (s)&Kiek kartų kreiptąsi pagalbos&Padarytos klaidos&Sustojimų skaičius\\ \hline
+1  &  100\% & 3 & 0 & 0 & 0\\ \hline
+2  &  100\% & 8 & 0 & 0 & 1 \\ \hline
+3  &  100\% & 4.8 & 0 & 0 & 2 \\ \hline
+4  &  100\% &  5.8 & 0 & 0 & 0\\ \hline
+5  &  80\% &  6.2 & 1 & 0 & 2 \\ \hline
+6  &  100\% &  9.4 & 0 & 0 & 0 \\ \hline
+7  &  80\% & 4.8 & 0 & 0 & 0 \\ \hline
+8  &  100\% & 14.4 & 0 & 0 & 0 \\ \hline
+9  &  60\% & 7 & 0 & 3 & 1\\ \hline
+10 &  100\% & 9.6 & 0 & 0 & 0 \\ \hline
+11 &  80\% &  42 & 3 & 7 & 5\\ \hline
+12 &  80\% & 24 & 0 & 1 & 3\\ \hline
+13 &  100\% & 15 & 0 & 1 & 2\\ \hline
+\end{tabular}
+\end{center}
 \subsection{Panaudojamumo matai ir siekiai}
 \begin{center}
 	captionof{table}{Panaudojamumo matų ir siekių patikrinimas.}
@@ -249,22 +268,42 @@ Užduoties Nr.&Komentarai\\ \hline
 	Siekis & Ar įvykdytas? \\ \hline
 	Vartotojui įvedus ne mažiau, kaip 3 simbolius į paieškos langą bus siūlomi pilni paieškos tekstai. & Taip. \\ \hline
 	Vartotojas galės įvesti sumą bei pradėti pavedimą pagrindiniame lange. & Taip. \\ \hline
-	Mokėjimo išrašo datos apsibrėžime nebus būtina pasirinkti dieną (užteks mėnesio). & - \\ \hline
-	Vartotojas galės pasirinkti gavėją iš gavėjų arba ankstesnių gavėjų sąrašų. & - \\ \hline
+	Mokėjimo išrašo datos apsibrėžime nebus būtina pasirinkti dieną (užteks mėnesio). & Taip. \\ \hline
+	Vartotojas galės pasirinkti gavėją iš gavėjų arba ankstesnių gavėjų sąrašų. & Taip. \\ \hline
 	Paieškos rezultatus bus galima filtruoti pagal bent 4 skirtingas kategorijas. & Taip. \\ \hline
 	Vartotojas paieškos langą surasti gebės ne per ilgesnį laiką, nei 30 sekundžių. & Taip. \\ \hline
 	Vartotojas gebės atlikti pavedimą per ne ilgiau kaip 2 minutes. & Taip. \\ \hline
-	97\% vartotojų gebės pirmu bandymu rasti mokėjimo pavedimo funkciją. & - \\ \hline
+	97\% vartotojų gebės pirmu bandymu rasti mokėjimo pavedimo funkciją. & Taip \\ \hline
 	Vartotojas mokėjimų išrašo langą gebės pasiekti ne per daugiau, nei 2 mygtuko paspaudimus. & Taip. \\ \hline
-	80\% vartotojų gebės parinkti tinkamą raktinį paieškos žodį norimiems rezultatams gauti. & - \\ \hline
-	Vartotojas, rinkdamasis gavėją iš pateiktų sąrašų, gebės atlikti pavedimą 3 mygtukų paspaudimu. & - \\ \hline
+	80\% vartotojų gebės parinkti tinkamą raktinį paieškos žodį norimiems rezultatams gauti. & Taip. \\ \hline
+	Vartotojas, rinkdamasis gavėją iš pateiktų sąrašų, gebės atlikti pavedimą 3 mygtukų paspaudimu. & Ne. \\ \hline
 	95\% vartotojų gebės grįžti iš mokėjimo patvirtinimo lango ir pakeisti mokėjimo informaciją. & Taip. \\ \hline
-	90\% žmonių gebės pasinaudoti mokėjimo ruošiniu atlikdami mokėjimą. & - \\ \hline
-	80\% žmonių gebės susikurti mokėjo ruošinį. & - \\ \hline
+	90\% žmonių gebės pasinaudoti mokėjimo ruošiniu atlikdami mokėjimą. & Taip. \\ \hline
+	80\% žmonių gebės susikurti mokėjo ruošinį. & Taip. \\ \hline
 
     \end{tabular}
 \end{center}
 \section{Rekomendacijos}
+
+\begin{itemize}
+	\item Dažnis - Skaičius vartotojų, kurie susidūrė su šiuo defektu.
+	\item Prioritetas:
+		\begin{itemize}
+			\item Mažas - nedidelis dažniausiai visualinis defektas, netrukdantis darbui.
+			\item Vidutinis - defektas, trukdantis darbui, tačiau per daug neįtakojantis klaidų skaičiaus.
+			\item Didelis - defektas, kuris dažnai sukelia klaidas.
+		\end{itemize}
+\end{itemize}
+\begin{center}
+    \begin{tabular}{ |p{2cm}| p{4cm} | p{2cm} | p{2cm} | p{5cm} |}
+    \hline
+	Užduoties Nr.&Defektas&Dažnis&Prioritetas&Siūlomas sprendimas\\ \hline
+	5&Per daug skirtukų prie ruošinių &2&Vidutinis&Suparasti ruošinių lentelę, paliekant 2 esminius stulpelius(vienas ankstesnių mokėjimų, kitas vartotojo sukurtų ruošinių). \\ \hline
+	9&Galima pagalvoti, kad mokėjimo išrašų langas turi būti mokęjimų lange.&2&Vidutinis&Vienas iš sprendimų pridėti papildomą nuorodą į išrašo langą iš mokėjimų lango, kadangi vietos trūkumo tam padaryti nėra.\\ \hline
+	10&Galutinė data nenustatyta į šiandieną.&4&Mažas&Pakeisti galutinę datą taip, kad jis visada būtų einamoji diena. \\ \hline
+	11&Ruošinių sukūrimas priskirtas prie vietinių mokėjimų.&5&Didelis& Perkelti mokėjimo ruošinių sukūrimą į jam priskirtą langą, iš kurio nueiti galima iš mokėjimo lango, tuo pačiu supaprastinant vietinių mokėjimo langą. \\ \hline
+    \end{tabular}
+\end{center}
 
 \section{Priedai}
 \subsection{Klausimynai}
